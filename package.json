@@ -7,8 +7,8 @@
   "scripts": {
     "dev": "nuxt --hostname 127.0.0.1 --port 3111",
     "build": "nuxt build",
-    "start": "nuxt start --hostname 127.0.0.1 --port 3111",
-    "generate": "nuxt generate --hostname 127.0.0.1 --port 3111"
+    "start": "nuxt start",
+    "generate": "nuxt generate"
   },
   "dependencies": {
     "cross-env": "^5.2.0",
