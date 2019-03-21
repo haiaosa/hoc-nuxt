@@ -60,6 +60,21 @@
         </div>
       </li>
     </ol>
+    <ol type="1">
+      <li>
+        <div class="content has-text-white">
+          <h3 class="subtitle">Phần này là Phân biệt SSR với Pre-render</h3>
+          <p>
+            SSR thực ra vẫn cần Server. Còn Pre-render ko cần server, sử dụng
+            Netlify hoặc GitPage thì sẽ đc free hosting
+          </p>
+          <p>
+            Nếu trang web mà ko có Dynamic Routes thì Mặc định đã done với
+            Pre-rendering already.
+          </p>
+        </div>
+      </li>
+    </ol>
   </div>
 </template>
 
