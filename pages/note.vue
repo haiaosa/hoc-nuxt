@@ -52,6 +52,13 @@
           </p>
         </div>
       </li>
+      <li>
+        <div class="content has-text-white">
+          <h3 class="subtitle">Phần này là Async với Vuex</h3>
+          <p>Dm, nó lại sử dụng fetch() để dispatch action của store.</p>
+          <p>Trong action, sau khi get API là nó commit Mutations, nhớ nhé.</p>
+        </div>
+      </li>
     </ol>
   </div>
 </template>

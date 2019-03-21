@@ -22,14 +22,23 @@ export default {
   },
   data() {
     return {
-      id: this.$route.params.id,
-      post: {}
+      id: this.$route.params.id
     };
   },
-  async asyncData({ $axios, params }) {
-    let post = await $axios.$get(`posts/${params.id}`);
-    return { post };
+  async fetch({ store, params }) {
+    await store.dispatch("posts/fetchPost", params.id);
+  },
+  computed: {
+    post() {
+      return this.$store.state.posts.all.find(
+        post => post.id === Number(this.id)
+      );
+    }
   }
+  // async asyncData({ $axios, params }) {
+  //   let post = await $axios.$get(`posts/${params.id}`);
+  //   return { post };
+  // }
 };
 </script>
 

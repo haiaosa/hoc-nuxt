@@ -10,9 +10,9 @@
       </h2>
       <div class="links">
         <nuxt-link
-          v-for="post in posts"
+          v-for="(post, buom) in posts"
           :to="{ name: 'posts-id', params: { id: post.id } }"
-          :key="post.id"
+          :key="buom"
           class="button--green"
           >{{ post.title }}
         </nuxt-link>
@@ -28,10 +28,19 @@ export default {
   components: {
     Logo
   },
-  async asyncData({ $axios }) {
-    let posts = await $axios.$get("posts");
-    return { posts };
+  async fetch({ store }) {
+    // dispatch the action fetchAllPosts
+    await store.dispatch("posts/fetchAllPosts");
+  },
+  computed: {
+    posts() {
+      return this.$store.state.posts.all;
+    }
   }
+  // async asyncData({ $axios }) {
+  //   let posts = await $axios.$get("posts");
+  //   return { posts };
+  // }
 };
 </script>
 
