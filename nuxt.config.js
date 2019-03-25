@@ -1,5 +1,5 @@
-import pkg from "./package";
-import axios from "axios";
+import pkg from "./package"
+import axios from "axios"
 
 export default {
   mode: "universal",
@@ -8,8 +8,8 @@ export default {
     async routes() {
       let response = await axios.get(
         "http://jsonplaceholder.typicode.com/posts"
-      );
-      return response.data.map(post => `posts/${post.id}`);
+      )
+      return response.data.map(post => `posts/${post.id}`)
     }
   },
 
@@ -48,7 +48,7 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     "@nuxtjs/axios",
     // Doc:https://github.com/nuxt-community/modules/tree/master/packages/bulma
-    "@nuxtjs/bulma"
+    "nuxt-buefy"
   ],
   /*
    ** Axios module configuration
@@ -74,4 +74,4 @@ export default {
      */
     extend(config, ctx) {}
   }
-};
+}

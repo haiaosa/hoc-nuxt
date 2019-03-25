@@ -22,26 +22,27 @@
 </template>
 
 <script>
-import Logo from "~/components/Logo.vue";
+import Logo from '~/components/Logo.vue'
 
 export default {
+  layout: 'homeWithSidebar',
   components: {
     Logo
   },
   async fetch({ store }) {
     // dispatch the action fetchAllPosts
-    await store.dispatch("posts/fetchAllPosts");
+    await store.dispatch('posts/fetchAllPosts')
   },
   computed: {
     posts() {
-      return this.$store.state.posts.all;
+      return this.$store.state.posts.all
     }
   }
   // async asyncData({ $axios }) {
   //   let posts = await $axios.$get("posts");
   //   return { posts };
   // }
-};
+}
 </script>
 
 <style>
@@ -55,8 +56,8 @@ export default {
 }
 
 .title {
-  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   display: block;
   font-weight: 300;
   font-size: 100px;
