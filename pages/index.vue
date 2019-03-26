@@ -1,11 +1,9 @@
 <template>
-  <section class="container">
-    <div>
-      <logo />
-      <h1 class="title">
-        trang-beo-lun
-      </h1>
-      <h2 class="subtitle">
+  <div class="tile is-child">
+    <h1 class="title">
+      trang-beo-lun
+    </h1>
+    <!-- <h2 class="subtitle">
         Quyet tam giam can thanh sieu mau
       </h2>
       <div class="links">
@@ -16,9 +14,8 @@
           class="button--green"
           >{{ post.title }}
         </nuxt-link>
-      </div>
-    </div>
-  </section>
+      </div> -->
+  </div>
 </template>
 
 <script>
