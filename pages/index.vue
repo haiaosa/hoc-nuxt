@@ -1,9 +1,9 @@
 <template>
-  <div class="tile is-child">
-    <h1 class="title">
+  <div>
+    <h1>
       trang-beo-lun
     </h1>
-    <!-- <h2 class="subtitle">
+    <!-- <h2>
         Quyet tam giam can thanh sieu mau
       </h2>
       <div class="links">
@@ -19,13 +19,8 @@
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
-
 export default {
   layout: 'homeWithSidebar',
-  components: {
-    Logo
-  },
   async fetch({ store }) {
     // dispatch the action fetchAllPosts
     await store.dispatch('posts/fetchAllPosts')

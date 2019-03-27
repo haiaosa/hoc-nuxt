@@ -4,7 +4,9 @@
       <div class="content has-text-centered has-text-white-ter">
         <p>
           <strong class="has-text-warning"
-            ><a class="button is-warning is-outlined">Truyện 1vs3</a></strong
+            ><a class="button is-warning is-large is-fullwidth"
+              >Truyện 1vs3</a
+            ></strong
           ><br />
           Đọc truyện tranh, truyện chữ online mới và hay nhất, cập nhật liên
           tục.
