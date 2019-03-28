@@ -1,8 +1,10 @@
 <template>
-  <div>
-    <h1>
-      trang-beo-lun
-    </h1>
+  <v-layout wrap>
+    <v-flex xs12>
+      <v-card dark color="primary">
+        <v-card-text class="px-0">trang-beo-lun</v-card-text>
+      </v-card>
+    </v-flex>
     <!-- <h2>
         Quyet tam giam can thanh sieu mau
       </h2>
@@ -15,7 +17,7 @@
           >{{ post.title }}
         </nuxt-link>
       </div> -->
-  </div>
+  </v-layout>
 </template>
 
 <script>
