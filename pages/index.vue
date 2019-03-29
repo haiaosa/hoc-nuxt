@@ -1,11 +1,12 @@
 <template>
-  <v-layout wrap>
-    <v-flex xs12>
-      <v-card dark color="primary">
-        <v-card-text class="px-0">trang-beo-lun</v-card-text>
+  <v-layout row wrap>
+    <v-flex v-for="n in 2" :key="n" d-flex lg12>
+      <v-card color="indigo" dark>
+        <v-card-text>{{ lorem.slice(0, 70) }}</v-card-text>
       </v-card>
     </v-flex>
-    <!-- <h2>
+  </v-layout>
+  <!-- <h2>
         Quyet tam giam can thanh sieu mau
       </h2>
       <div class="links">
@@ -17,12 +18,16 @@
           >{{ post.title }}
         </nuxt-link>
       </div> -->
-  </v-layout>
 </template>
 
 <script>
 export default {
   layout: 'homeWithSidebar',
+  data: function() {
+    return {
+      lorem: `Lorem ipsum dolor sit amet, mel at clita quando. Te sit oratio vituperatoribus, nam ad ipsum posidonium mediocritatem, explicari dissentiunt cu mea. Repudiare disputationi vim in, mollis iriure nec cu, alienum argumentum ius ad. Pri eu justo aeque torquatos.`
+    }
+  },
   async fetch({ store }) {
     // dispatch the action fetchAllPosts
     await store.dispatch('posts/fetchAllPosts')
