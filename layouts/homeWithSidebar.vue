@@ -1,14 +1,12 @@
 <template>
   <v-app dark>
+    <TheNavigationDrawer />
     <TheToolbar />
     <v-content>
       <v-container fluid grid-list-xs>
         <v-layout row wrap>
-          <v-flex d-flex lg9>
+          <v-flex d-flex>
             <nuxt />
-          </v-flex>
-          <v-flex d-flex lg3>
-            <TheSidebar />
           </v-flex>
         </v-layout>
       </v-container>
@@ -18,12 +16,12 @@
 
 <script>
 import TheToolbar from '~/components/TheToolbar'
-import TheSidebar from '~/components/TheSidebar'
+import TheNavigationDrawer from '~/components/TheNavigationDrawer'
 
 export default {
   components: {
     TheToolbar,
-    TheSidebar
+    TheNavigationDrawer
   },
   props: {
     source: String

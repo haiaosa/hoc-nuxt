@@ -1,10 +1,11 @@
 <template>
-  <v-toolbar app clipped-right>
+  <v-toolbar app>
     <v-toolbar-side-icon>
       <v-icon>home</v-icon>
     </v-toolbar-side-icon>
-    <v-toolbar-items>
-      <v-btn flat nuxt :to="{ name: 'index' }">Trang chủ</v-btn>
+    <v-toolbar-title>Truyện 1vs3</v-toolbar-title>
+    <v-spacer></v-spacer>
+    <v-toolbar-items class="hidden-sm-and-down">
       <v-btn flat nuxt :to="{ name: 'note' }">Trang Mô tả</v-btn>
       <v-btn flat nuxt :to="{ name: 'note' }">Trang đọc chuyện</v-btn>
       <v-btn flat nuxt :to="{ name: 'index' }">Trang sắp xếp</v-btn>
@@ -16,10 +17,7 @@
       <v-btn flat nuxt :to="{ name: 'index' }">Nhân sự</v-btn>
     </v-toolbar-items>
     <v-spacer></v-spacer>
-    <v-toolbar-side-icon>
-      <v-icon>home</v-icon>
-    </v-toolbar-side-icon>
-    <v-toolbar-side-icon>
+    <v-btn icon>
       <v-badge color="red">
         <template v-slot:badge>
           <span>!</span>
@@ -28,22 +26,11 @@
           mail
         </v-icon>
       </v-badge>
-    </v-toolbar-side-icon>
-    <v-toolbar-items>
-      <v-btn flat>Phong Nguyễn</v-btn>
-      <v-menu offset-y>
-        <template v-slot:activator="{ on }">
-          <v-btn icon v-on="on">
-            <v-icon>more_vert</v-icon>
-          </v-btn>
-        </template>
-        <v-list>
-          <v-list-tile v-for="(item, index) in items" :key="index" @click="">
-            <v-list-tile-title>{{ item.title }}</v-list-tile-title>
-          </v-list-tile>
-        </v-list>
-      </v-menu>
-    </v-toolbar-items>
+    </v-btn>
+    <v-btn flat>Phong Nguyễn</v-btn>
+    <v-btn icon>
+      <v-icon>more_vert</v-icon>
+    </v-btn>
   </v-toolbar>
 </template>
 
