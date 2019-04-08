@@ -1,17 +1,14 @@
 <template>
   <div>
-    <!-- <TheNavbar /> -->
     <nuxt />
   </div>
 </template>
 <script>
 import Logo from '~/components/Logo.vue'
-import TheNavbar from '~/components/TheNavbar.vue'
 
 export default {
   components: {
-    Logo,
-    TheNavbar
+    Logo
   }
 }
 </script>

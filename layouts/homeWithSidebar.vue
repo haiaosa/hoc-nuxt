@@ -2,26 +2,20 @@
   <v-app dark>
     <TheNavigationDrawer />
     <TheToolbar />
-    <v-content>
-      <v-container fluid grid-list-xs>
-        <v-layout row wrap>
-          <v-flex d-flex>
-            <nuxt />
-          </v-flex>
-        </v-layout>
-      </v-container>
-    </v-content>
+    <TheContent />
   </v-app>
 </template>
 
 <script>
-import TheToolbar from '~/components/TheToolbar'
-import TheNavigationDrawer from '~/components/TheNavigationDrawer'
+import TheToolbar from '~/components/cores/TheToolbar'
+import TheNavigationDrawer from '~/components/cores/TheNavigationDrawer'
+import TheContent from '~/components/cores/TheContent'
 
 export default {
   components: {
     TheToolbar,
-    TheNavigationDrawer
+    TheNavigationDrawer,
+    TheContent
   },
   props: {
     source: String
