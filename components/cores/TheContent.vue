@@ -1,6 +1,6 @@
 <template>
   <v-content>
-    <v-container grid-list-xl>
+    <v-container grid-list-md>
       <nuxt />
     </v-container>
   </v-content>
