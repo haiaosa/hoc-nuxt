@@ -64,13 +64,13 @@ export default {
    */
   vuetify: {
     theme: {
-      primary: '#1976D2',
-      secondary: '#424242',
-      accent: '#82B1FF',
-      error: '#FF5252',
-      info: '#2196F3',
-      success: '#4CAF50',
-      warning: '#FFC107'
+      primary: '#00796B',
+      secondary: '#7C4DFF',
+      accent: '#EF6C00',
+      error: '#8D6E63',
+      info: '#6A1B9A',
+      success: '#E57373',
+      warning: '#00ACC1'
     }
   },
 

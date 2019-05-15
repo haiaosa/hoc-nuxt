@@ -1,9 +1,9 @@
 <template>
   <v-layout row wrap>
-    <v-flex d-flex>
-      {{ lorem }}
-    </v-flex xl11 lg10 md9 sm8 xs5>
     <v-flex>
+      {{ lorem }}
+    </v-flex>
+    <v-flex xs5 sm8 md9 lg10 xl11>
       {{ lorem }}
     </v-flex>
   </v-layout>

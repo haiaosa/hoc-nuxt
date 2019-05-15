@@ -1,6 +1,6 @@
 <template>
-  <v-app dark>
-    <TheNavigationDrawer />
+  <v-app>
+    <!-- <TheNavigationDrawer /> -->
     <TheToolbar />
     <TheContent />
   </v-app>
@@ -16,9 +16,6 @@ export default {
     TheToolbar,
     TheNavigationDrawer,
     TheContent
-  },
-  props: {
-    source: String
   }
 }
 </script>
