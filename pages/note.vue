@@ -79,7 +79,9 @@
 </template>
 
 <script>
-export default {};
+export default {
+  layout: 'homeWithSidebar'
+}
 </script>
 
 <style scoped></style>

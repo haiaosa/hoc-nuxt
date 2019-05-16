@@ -3,7 +3,7 @@
     <v-flex>
       {{ lorem }}
     </v-flex>
-    <v-flex xs5 sm8 md9 lg10 xl11>
+    <v-flex xs5 sm8 md9 lg10 xl12>
       {{ lorem }}
     </v-flex>
   </v-layout>
