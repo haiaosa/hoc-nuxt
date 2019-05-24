@@ -1,5 +1,5 @@
 <template>
-  <v-navigation-drawer app v-model="drawer" class="primary lighten-1">
+  <v-navigation-drawer app :value="drawer" class="primary lighten-1">
     <v-list>
       <v-list-tile v-for="link in links" :key="link.text" nuxt :to="link.route">
         <v-list-tile-action>
