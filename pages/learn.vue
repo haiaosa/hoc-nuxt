@@ -1,60 +1,30 @@
 <template>
-  <v-container fluid grid-list-md>
-    <v-layout row wrap>
-      <v-flex d-flex lg12>
-        <v-layout column>
-          <v-flex d-flex>
-            <v-card color="blue-grey" dark tile flat>
-              <v-card-text>{{ lorem }}</v-card-text>
-            </v-card>
-          </v-flex>
-          <v-flex d-flex>
-            <v-card color="brown" dark tile flat>
-              <v-card-text>{{ lorem }}</v-card-text>
-            </v-card>
-          </v-flex>
-        </v-layout>
-      </v-flex>
-
-      <v-flex d-flex lg7>
-        <v-layout row wrap>
-          <v-flex d-flex>
-            <v-card color="indigo lighten-2" dark tile flat>
-              <v-card-text>{{ lorem.slice(0, 70) }}</v-card-text>
-            </v-card>
-          </v-flex>
-          <v-flex d-flex>
-            <v-layout row>
-              <v-flex v-for="n in 2" :key="n" d-flex>
-                <v-card color="amber lighten-2" tile flat>
-                  <v-card-text>{{ lorem.slice(0, 40) }}</v-card-text>
-                </v-card>
-              </v-flex>
-            </v-layout>
-          </v-flex>
-        </v-layout>
-      </v-flex>
-      <!-- <v-flex d-flex xs12 sm2 child-flex>
-        <v-card color="orange lighten-2" tile flat>
-          <v-card-text>{{ lorem.slice(0, 90) }}</v-card-text>
+  <div>
+    <v-tabs v-model="active" color="cyan" dark slider-color="yellow">
+      <v-tab v-for="n in 3" :key="n" ripple> Item {{ n }} </v-tab>
+      <v-tab-item v-for="n in 3" :key="n">
+        <v-card flat>
+          <v-card-text>{{ text }}</v-card-text>
         </v-card>
-      </v-flex>
-      <v-flex d-flex xs12 sm3>
-        <v-card color="red lighten-2" dark tile flat>
-          <v-card-text>{{ lorem.slice(0, 100) }}</v-card-text>
-        </v-card>
-      </v-flex> -->
-    </v-layout>
-  </v-container>
+      </v-tab-item>
+    </v-tabs>
+  </div>
 </template>
 
 <script>
 export default {
-  layout: 'homeWithSidebar',
-  data: () => ({
-    lorem: `Lorem ipsum dolor sit amet, mel at clita quando. Te sit oratio vituperatoribus, nam ad ipsum posidonium mediocritatem, explicari dissentiunt cu mea. Repudiare disputationi vim in, mollis iriure nec cu, alienum argumentum ius ad. Pri eu justo aeque torquatos.`
-  })
+  data() {
+    return {
+      active: null,
+      text:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+    }
+  },
+  methods: {
+    next() {
+      const active = parseInt(this.active)
+      this.active = active < 2 ? active + 1 : 0
+    }
+  }
 }
 </script>
-
-<style scoped></style>
