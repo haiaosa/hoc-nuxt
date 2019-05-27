@@ -20,13 +20,73 @@
                   v-model="active"
                   color="cyan"
                   dark
-                  slider-color="yellow"
+                  slider-color="red lighten-2"
+                  grow
                 >
                   <v-tab v-for="n in 3" :key="n" ripple> Item {{ n }} </v-tab>
                   <v-tab-item v-for="n in 3" :key="n">
-                    <v-card flat>
-                      <v-card-text>{{ text }}</v-card-text>
-                    </v-card>
+                    <v-layout column wrap mt-1>
+                      <v-flex d-flex>
+                        <v-layout row wrap>
+                          <v-flex d-flex xs7>
+                            <v-card color="yellow darken-1" flat>
+                              <v-card-text>{{ text }}</v-card-text>
+                            </v-card>
+                          </v-flex>
+                          <v-flex d-flex xs5>
+                            <v-layout column wrap>
+                              <v-flex>
+                                <v-card color="yellow darken-4" flat>
+                                  <v-card-text>{{ text }}</v-card-text>
+                                </v-card>
+                              </v-flex>
+                              <v-flex>
+                                <v-card color="yellow darken-4" flat>
+                                  <v-card-text>{{ text }}</v-card-text>
+                                </v-card>
+                              </v-flex>
+                            </v-layout>
+                          </v-flex>
+                        </v-layout>
+                      </v-flex>
+                      <v-flex d-flex>
+                        <v-layout row wrap>
+                          <v-flex v-for="n in 4" :key="n" d-flex xs6>
+                            <v-card color="green darken-5" flat>
+                              <v-card-text>{{ text }}</v-card-text>
+                            </v-card>
+                          </v-flex>
+                        </v-layout>
+                      </v-flex>
+                      <v-flex d-flex>
+                        <v-layout row wrap>
+                          <v-flex v-for="n in 2" :key="n" d-flex xs6>
+                            <v-card color="green lighten-3" flat>
+                              <v-card-text>{{ text }}</v-card-text>
+                            </v-card>
+                          </v-flex>
+                        </v-layout>
+                      </v-flex>
+                      <v-flex d-flex>
+                        <v-layout row wrap>
+                          <v-flex v-for="n in 2" :key="n" d-flex xs6>
+                            <v-card color="blue lighten-1" flat>
+                              <v-card-text>{{ text }}</v-card-text>
+                            </v-card>
+                          </v-flex>
+                        </v-layout>
+                      </v-flex>
+                      <v-flex d-flex>
+                        <v-card color="yellow darken-4" flat>
+                          <v-card-text>{{ text }}</v-card-text>
+                        </v-card>
+                      </v-flex>
+                      <v-flex d-flex>
+                        <v-card color="brown darken-2" flat>
+                          <v-card-text>{{ text }}</v-card-text>
+                        </v-card>
+                      </v-flex>
+                    </v-layout>
                   </v-tab-item>
                 </v-tabs>
               </v-flex>
