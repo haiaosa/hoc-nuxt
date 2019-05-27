@@ -1,7 +1,7 @@
 <template>
-  <v-container fluid grid-list-sm>
+  <v-container fluid grid-list-md>
     <v-layout row wrap>
-      <v-flex d-flex xs12 order-xs5>
+      <v-flex d-flex lg12>
         <v-layout column>
           <v-flex d-flex>
             <v-card color="blue-grey" dark tile flat>
@@ -15,7 +15,8 @@
           </v-flex>
         </v-layout>
       </v-flex>
-      <v-flex d-flex xs12 sm7>
+
+      <v-flex d-flex lg7>
         <v-layout row wrap>
           <v-flex d-flex>
             <v-card color="indigo lighten-2" dark tile flat>
@@ -33,7 +34,7 @@
           </v-flex>
         </v-layout>
       </v-flex>
-      <v-flex d-flex xs12 sm2 child-flex>
+      <!-- <v-flex d-flex xs12 sm2 child-flex>
         <v-card color="orange lighten-2" tile flat>
           <v-card-text>{{ lorem.slice(0, 90) }}</v-card-text>
         </v-card>
@@ -42,7 +43,7 @@
         <v-card color="red lighten-2" dark tile flat>
           <v-card-text>{{ lorem.slice(0, 100) }}</v-card-text>
         </v-card>
-      </v-flex>
+      </v-flex> -->
     </v-layout>
   </v-container>
 </template>

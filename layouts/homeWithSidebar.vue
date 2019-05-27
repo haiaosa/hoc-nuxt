@@ -4,21 +4,26 @@
     <TheToolbar />
 
     <v-content>
-      <v-container fluid>
-        <nuxt />
-      </v-container>
+      <nuxt />
     </v-content>
+
+    <TheFooter />
   </v-app>
 </template>
 
 <script>
 import TheDrawer from '~/components/TheDrawer'
 import TheToolbar from '~/components/TheToolbar'
+import TheFooter from '~/components/TheFooter'
 
 export default {
   components: {
     TheDrawer,
-    TheToolbar
-  }
+    TheToolbar,
+    TheFooter
+  },
+  data: () => ({
+    links: ['Home', 'About Us', 'Team', 'Services', 'Blog', 'Contact Us']
+  })
 }
 </script>
