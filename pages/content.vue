@@ -35,32 +35,61 @@
             </v-card>
           </v-flex>
           <v-flex d-flex>
-            <v-card color="pink lighten-2" dark>
-              <v-card-text>{{ lorem.slice(0, 30) }}</v-card-text>
-            </v-card>
+            <v-layout row wrap>
+              <v-flex v-for="n in 6" :key="n" d-flex xs4>
+                <v-card color="purple lighten-2" dark>
+                  <v-card-text>{{ lorem.slice(0, 30) }}</v-card-text>
+                </v-card>
+              </v-flex>
+            </v-layout>
           </v-flex>
           <v-flex d-flex>
-            <v-card color="pink lighten-2" dark>
-              <v-card-text>{{ lorem.slice(0, 30) }}</v-card-text>
-            </v-card>
+            <v-layout row wrap>
+              <v-flex v-for="n in 4" :key="n" d-flex xs3>
+                <v-card color="purple lighten-4" dark>
+                  <v-card-text>{{ lorem.slice(0, 30) }}</v-card-text>
+                </v-card>
+              </v-flex>
+            </v-layout>
           </v-flex>
           <v-flex d-flex>
-            <v-card color="pink lighten-2" dark>
-              <v-card-text>{{ lorem.slice(0, 30) }}</v-card-text>
-            </v-card>
+            <v-layout row wrap>
+              <v-flex v-for="n in 2" :key="n" d-flex xs6>
+                <v-card color="purple darken-2" dark>
+                  <v-card-text>{{ lorem.slice(0, 30) }}</v-card-text>
+                </v-card>
+              </v-flex>
+            </v-layout>
           </v-flex>
           <v-flex d-flex>
-            <v-card color="pink lighten-2" dark>
-              <v-card-text>{{ lorem.slice(0, 30) }}</v-card-text>
-            </v-card>
+            <v-layout column wrap>
+              <v-flex d-flex>
+                <v-card color="yellow darken-1" dark>
+                  <v-card-text>{{ lorem.slice(0, 30) }}</v-card-text>
+                </v-card>
+              </v-flex>
+              <v-flex d-flex>
+                <v-layout row wrap>
+                  <v-flex v-for="n in 4" :key="n" d-flex xs3>
+                    <v-card color="yellow darken-1" dark>
+                      <v-card-text>{{ lorem.slice(0, 30) }}</v-card-text>
+                    </v-card>
+                  </v-flex>
+                </v-layout>
+              </v-flex>
+            </v-layout>
           </v-flex>
           <v-flex d-flex>
-            <v-card color="pink lighten-2" dark>
-              <v-card-text>{{ lorem.slice(0, 30) }}</v-card-text>
-            </v-card>
+            <v-layout row wrap>
+              <v-flex v-for="n in 2" :key="n" d-flex xs6>
+                <v-card color="yellow darken-3" dark>
+                  <v-card-text>{{ lorem.slice(0, 30) }}</v-card-text>
+                </v-card>
+              </v-flex>
+            </v-layout>
           </v-flex>
           <v-flex d-flex>
-            <v-card color="pink lighten-2" dark>
+            <v-card color="blue darken-3" dark>
               <v-card-text>{{ lorem.slice(0, 30) }}</v-card-text>
             </v-card>
           </v-flex>

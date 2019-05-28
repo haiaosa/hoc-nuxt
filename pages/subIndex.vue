@@ -10,7 +10,11 @@
         <v-layout column wrap>
           <v-flex d-flex>
             <v-card color="blue-grey lighten-1" dark>
-              <v-card-text>{{ lorem }}</v-card-text>
+              <v-card-text>
+                <p class="display-4 text-uppercase text-xs-center">
+                  Quảng cáo here
+                </p>
+              </v-card-text>
             </v-card>
           </v-flex>
           <v-flex d-flex>
@@ -90,14 +94,14 @@
                   </v-tab-item>
                 </v-tabs>
               </v-flex>
-              <v-flex xs4>
+              <v-flex d-flex xs4>
                 <v-layout column wrap>
-                  <v-flex>
-                    <v-card color="blue-grey lighten-3" dark>
+                  <v-flex d-flex>
+                    <v-card color="blue lighten-3" dark>
                       <v-card-text>{{ lorem }}</v-card-text>
                     </v-card>
                   </v-flex>
-                  <v-flex>
+                  <v-flex d-flex>
                     <v-card color="blue-grey lighten-3" dark>
                       <v-card-text>{{ lorem }}</v-card-text>
                     </v-card>
