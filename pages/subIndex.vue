@@ -96,11 +96,7 @@
               </v-flex>
               <v-flex d-flex xs4>
                 <v-layout column wrap>
-                  <v-flex d-flex>
-                    <v-card color="blue lighten-3" dark>
-                      <v-card-text>{{ lorem }}</v-card-text>
-                    </v-card>
-                  </v-flex>
+                  <TheRight1 />
                   <v-flex d-flex>
                     <v-card color="blue-grey lighten-3" dark>
                       <v-card-text>{{ lorem }}</v-card-text>
@@ -122,7 +118,12 @@
 </template>
 
 <script>
+import TheRight1 from '~/components/SubIndex/TheRight1'
+
 export default {
+  components: {
+    TheRight1
+  },
   layout: 'homeWithSidebar',
   data: function() {
     return {
