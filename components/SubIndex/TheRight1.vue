@@ -1,6 +1,6 @@
 <template>
   <v-flex d-flex shrink>
-    <v-card color="blue darken-1" dark>
+    <v-card>
       <v-toolbar color="primary" dark>
         <v-toolbar-items>
           <v-btn flat large block :ripple="false" class="custom-btn"
@@ -21,7 +21,7 @@
           ></v-divider>
 
           <v-list-tile v-else :key="item.title" avatar @click="">
-            <v-list-tile-avatar>
+            <v-list-tile-avatar tile size="50">
               <img :src="item.avatar" />
             </v-list-tile-avatar>
 
