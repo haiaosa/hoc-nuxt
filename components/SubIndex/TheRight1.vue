@@ -3,9 +3,9 @@
     <v-card>
       <v-toolbar color="primary" dark>
         <v-toolbar-items>
-          <v-btn flat large block :ripple="false" class="custom-btn"
-            >TIN TỨC THỊ TRƯỜNG</v-btn
-          >
+          <v-btn flat large block :ripple="false" class="custom-btn">{{
+            datas
+          }}</v-btn>
         </v-toolbar-items>
       </v-toolbar>
       <v-list three-line>
@@ -93,7 +93,8 @@ export default {
         }
       ]
     }
-  }
+  },
+  props: ['datas']
 }
 </script>
 <style scoped>
