@@ -154,7 +154,38 @@
                         <v-layout row wrap>
                           <v-flex d-flex xs6>
                             <v-card color="blue lighten-1" flat>
-                              <v-card-text>{{ text }}</v-card-text>
+                              <v-card-title
+                                primary-title
+                                nuxt
+                                :to="{ name: 'index' }"
+                              >
+                                {{ newsHN[0].title }}
+                              </v-card-title>
+                              <v-layout row wrap>
+                                <v-flex d-flex xs6>
+                                  <v-img :src="newsHN[0].img"></v-img>
+                                </v-flex>
+                                <v-flex d-flex xs6>
+                                  <v-card-text>
+                                    {{ newsHN[0].content }}
+                                  </v-card-text>
+                                </v-flex>
+                              </v-layout>
+                              <v-list three-line>
+                                <template v-for="(item, index) in today">
+                                  <v-list-tile :key="item.title" @click="">
+                                    <v-list-tile-content>
+                                      <v-list-tile-sub-title>{{
+                                        item.title
+                                      }}</v-list-tile-sub-title>
+                                    </v-list-tile-content>
+                                  </v-list-tile>
+                                  <v-divider
+                                    v-if="index + 1 < today.length"
+                                    :key="index"
+                                  ></v-divider>
+                                </template>
+                              </v-list>
                             </v-card>
                           </v-flex>
                           <v-flex d-flex xs6>
@@ -232,6 +263,9 @@ export default {
     },
     newsHN() {
       return this.$store.state.newsHN.newsHN
+    },
+    today() {
+      return this.$store.state.newsHN.today
     }
   }
 }

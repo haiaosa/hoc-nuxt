@@ -38,5 +38,27 @@ export const state = () => ({
       img: require('~/assets/5.jpg'),
       time: '27/05/2019 | 13:00'
     }
+  ],
+  today: [
+    { title: 'Những giò lan tiền tỷ tại Ngày hội hoa lan Thái Bình' },
+    { title: 'Té ngã giữa đường, người phụ nữ bị xe tải cán chết' },
+    {
+      title:
+        'Kỷ lục gia tiết lộ kỹ nghệ xây tuyệt tác chùa Một Cột, nhà Quốc hội Mỹ bằng tăm tre'
+    },
+    {
+      title: 'Vụ sập cầu ở Đồng Tháp: "Xe tải nặng gần 30 tấn không sập mới lạ"'
+    },
+    {
+      title:
+        'Giò lan “Người đẹp Bình Dương” hàng chục tỷ đồng được bán về Thái Bình'
+    },
+    { title: 'Ai là kẻ chủ mưu hạ độc rừng thông ở Lâm Đồng?' },
+    { title: 'Đi chơi Quốc tế thiếu nhi, bé trai rơi xuống hồ tử vong' },
+    { title: 'Bê-tông "gặm nhấm" vùng lõi vịnh Hạ Long' },
+    {
+      title:
+        'Thông tin về hai người Việt trong vụ đoàn xe bị đánh bom ở Philippines'
+    }
   ]
 })
