@@ -1,37 +1,32 @@
 <template>
-  <v-layout row>
-    <v-flex xs12 sm6 offset-sm3>
-      <v-avatar :color="color" :tile="tile" :size="avatarSize">
-        <img
-          v-if="img"
-          src="https://vuetifyjs.com/apple-touch-icon-180x180.png"
-          alt="avatar"
-        />
-        <span v-else>VJ</span>
-      </v-avatar>
+  <v-layout row justify-center>
+    <v-flex d-flex xs8>
+      <v-card color="yellow">
+        <v-card-title primary-title @click="">
+          {{ text }}
+        </v-card-title>
+        <v-layout row wrap>
+          <v-flex d-flex xs6>
+            <v-img :src="require('~/assets/1.jpg')"></v-img>
+          </v-flex>
+          <v-flex d-flex xs6>
+            <v-card-text>
+              {{ text }}
+            </v-card-text>
+          </v-flex>
+        </v-layout>
+      </v-card>
     </v-flex>
   </v-layout>
 </template>
 
 <script>
 export default {
-  data: () => ({
-    slider: 156,
-    tile: true,
-    color: 'primary',
-    colors: [
-      'primary',
-      'accent',
-      'warning lighten-2',
-      'teal',
-      'grey lighten-4'
-    ],
-    img: true
-  }),
-
-  computed: {
-    avatarSize() {
-      return `${this.slider}px`
+  layout: 'homeWithSidebar',
+  data() {
+    return {
+      text:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'
     }
   }
 }

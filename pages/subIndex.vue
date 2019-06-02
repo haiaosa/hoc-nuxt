@@ -33,40 +33,82 @@
                       <v-flex d-flex>
                         <v-layout row wrap>
                           <v-flex d-flex xs8>
-                            <v-card color="yellow darken-1" flat>
-                              <v-img src="/1.jpg" gradient>
-                                <v-container fill-height fluid>
-                                  <v-layout
-                                    align-end
-                                    justify-start
-                                    row
-                                    wrap
-                                    fill-height
-                                  >
-                                    <v-flex xs12>
-                                      <v-card-title>
-                                        Cá chết hàng loạt nổi trắng hồ Văn
-                                        Chương
-                                      </v-card-title>
-                                      <v-card-text>
-                                        {{ text }}
-                                      </v-card-text>
-                                    </v-flex>
-                                  </v-layout>
-                                </v-container>
+                            <v-card
+                              color="yellow darken-1"
+                              flat
+                              nuxt
+                              :to="{ name: 'index' }"
+                            >
+                              <v-img :src="require('~/assets/1.jpg')">
+                                <v-layout
+                                  align-end
+                                  justify-start
+                                  row
+                                  wrap
+                                  fill-height
+                                >
+                                  <v-flex xs12>
+                                    <v-card-title>
+                                      Cá chết hàng loạt nổi trắng hồ Văn Chương
+                                    </v-card-title>
+                                    <v-card-text>
+                                      {{ text }}
+                                    </v-card-text>
+                                  </v-flex>
+                                </v-layout>
                               </v-img>
                             </v-card>
                           </v-flex>
                           <v-flex d-flex xs4>
                             <v-layout column wrap>
                               <v-flex>
-                                <v-card color="yellow darken-4" flat>
-                                  <v-card-text>{{ text }}</v-card-text>
+                                <v-card
+                                  color="yellow darken-4"
+                                  flat
+                                  nuxt
+                                  :to="{ name: 'index' }"
+                                >
+                                  <v-img :src="require('~/assets/2.jpg')">
+                                    <v-layout
+                                      align-end
+                                      justify-start
+                                      row
+                                      wrap
+                                      fill-height
+                                    >
+                                      <v-flex xs12>
+                                        <v-card-title>
+                                          Ba năm Hà Nội trả hơn 7 tỷ thuê phần
+                                          mềm của Nhật Cường
+                                        </v-card-title>
+                                      </v-flex>
+                                    </v-layout>
+                                  </v-img>
                                 </v-card>
                               </v-flex>
                               <v-flex>
-                                <v-card color="yellow darken-4" flat>
-                                  <v-card-text>{{ text }}</v-card-text>
+                                <v-card
+                                  color="yellow darken-4"
+                                  flat
+                                  nuxt
+                                  :to="{ name: 'index' }"
+                                >
+                                  <v-img :src="require('~/assets/3.jpg')">
+                                    <v-layout
+                                      align-end
+                                      justify-start
+                                      row
+                                      wrap
+                                      fill-height
+                                    >
+                                      <v-flex xs12>
+                                        <v-card-title>
+                                          Về "chung một nhà", 8 sở ngành Hà Nội
+                                          hoạt động thế nào?
+                                        </v-card-title>
+                                      </v-flex>
+                                    </v-layout>
+                                  </v-img>
                                 </v-card>
                               </v-flex>
                             </v-layout>
@@ -75,9 +117,26 @@
                       </v-flex>
                       <v-flex d-flex>
                         <v-layout row wrap>
-                          <v-flex v-for="n in 4" :key="n" d-flex xs6>
-                            <v-card color="green darken-5" flat>
-                              <v-card-text>{{ text }}</v-card-text>
+                          <v-flex
+                            v-for="(news, index) in newsHN"
+                            :key="index"
+                            d-flex
+                            xs6
+                          >
+                            <v-card flat nuxt :to="{ name: 'index' }">
+                              <v-card-title primary-title>
+                                {{ news.title }}
+                              </v-card-title>
+                              <v-layout row wrap>
+                                <v-flex d-flex xs6>
+                                  <v-img :src="news.img"></v-img>
+                                </v-flex>
+                                <v-flex d-flex xs6>
+                                  <v-card-text>
+                                    {{ news.content }}
+                                  </v-card-text>
+                                </v-flex>
+                              </v-layout>
                             </v-card>
                           </v-flex>
                         </v-layout>
@@ -86,17 +145,26 @@
                         <v-layout row wrap>
                           <v-flex v-for="n in 2" :key="n" d-flex xs6>
                             <v-card color="green lighten-3" flat>
-                              <v-card-text>{{ text }}</v-card-text>
+                              <v-card-text>Quảng cáo here</v-card-text>
                             </v-card>
                           </v-flex>
                         </v-layout>
                       </v-flex>
                       <v-flex d-flex>
                         <v-layout row wrap>
-                          <v-flex v-for="n in 2" :key="n" d-flex xs6>
+                          <v-flex d-flex xs6>
                             <v-card color="blue lighten-1" flat>
                               <v-card-text>{{ text }}</v-card-text>
                             </v-card>
+                          </v-flex>
+                          <v-flex d-flex xs6>
+                            <v-layout column wrap>
+                              <v-flex v-for="n in 2" :key="n" d-flex xs6>
+                                <v-card color="blue lighten-1" flat>
+                                  <v-card-text>{{ text }}</v-card-text>
+                                </v-card>
+                              </v-flex>
+                            </v-layout>
                           </v-flex>
                         </v-layout>
                       </v-flex>
@@ -161,6 +229,9 @@ export default {
     },
     stock() {
       return this.$store.state.stock.stock
+    },
+    newsHN() {
+      return this.$store.state.newsHN.newsHN
     }
   }
 }
