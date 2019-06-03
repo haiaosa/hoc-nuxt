@@ -2,21 +2,11 @@
   <v-container fluid grid-list-md>
     <v-layout row wrap>
       <v-flex d-flex xs2>
-        <v-card color="grey lighten-2" dark>
-          <v-card-text>{{ lorem.slice(0, 30) }}</v-card-text>
-        </v-card>
+        <TheAdLeft/>
       </v-flex>
       <v-flex d-flex xs8>
         <v-layout column wrap>
-          <v-flex d-flex>
-            <v-card color="blue-grey lighten-1" dark>
-              <v-card-text>
-                <p class="display-4 text-uppercase text-xs-center">
-                  Quảng cáo here
-                </p>
-              </v-card-text>
-            </v-card>
-          </v-flex>
+          <TheAdTopMid/>
           <v-flex d-flex>
             <v-layout row wrap>
               <v-flex d-flex xs8>
@@ -31,183 +21,26 @@
                   <v-tab-item v-for="n in 3" :key="n">
                     <v-layout column wrap mt-1>
                       <v-flex d-flex>
-                        <v-layout row wrap>
-                          <v-flex d-flex xs8>
-                            <v-card
-                              color="yellow darken-1"
-                              flat
-                              nuxt
-                              :to="{ name: 'index' }"
-                            >
-                              <v-img :src="require('~/assets/1.jpg')">
-                                <v-layout
-                                  align-end
-                                  justify-start
-                                  row
-                                  wrap
-                                  fill-height
-                                >
-                                  <v-flex xs12>
-                                    <v-card-title>
-                                      Cá chết hàng loạt nổi trắng hồ Văn Chương
-                                    </v-card-title>
-                                    <v-card-text>
-                                      {{ text }}
-                                    </v-card-text>
-                                  </v-flex>
-                                </v-layout>
-                              </v-img>
-                            </v-card>
-                          </v-flex>
-                          <v-flex d-flex xs4>
-                            <v-layout column wrap>
-                              <v-flex>
-                                <v-card
-                                  color="yellow darken-4"
-                                  flat
-                                  nuxt
-                                  :to="{ name: 'index' }"
-                                >
-                                  <v-img :src="require('~/assets/2.jpg')">
-                                    <v-layout
-                                      align-end
-                                      justify-start
-                                      row
-                                      wrap
-                                      fill-height
-                                    >
-                                      <v-flex xs12>
-                                        <v-card-title>
-                                          Ba năm Hà Nội trả hơn 7 tỷ thuê phần
-                                          mềm của Nhật Cường
-                                        </v-card-title>
-                                      </v-flex>
-                                    </v-layout>
-                                  </v-img>
-                                </v-card>
-                              </v-flex>
-                              <v-flex>
-                                <v-card
-                                  color="yellow darken-4"
-                                  flat
-                                  nuxt
-                                  :to="{ name: 'index' }"
-                                >
-                                  <v-img :src="require('~/assets/3.jpg')">
-                                    <v-layout
-                                      align-end
-                                      justify-start
-                                      row
-                                      wrap
-                                      fill-height
-                                    >
-                                      <v-flex xs12>
-                                        <v-card-title>
-                                          Về "chung một nhà", 8 sở ngành Hà Nội
-                                          hoạt động thế nào?
-                                        </v-card-title>
-                                      </v-flex>
-                                    </v-layout>
-                                  </v-img>
-                                </v-card>
-                              </v-flex>
-                            </v-layout>
-                          </v-flex>
-                        </v-layout>
+                        <TheMain1 :items="text"/>
                       </v-flex>
                       <v-flex d-flex>
-                        <v-layout row wrap>
-                          <v-flex
-                            v-for="(news, index) in newsHN"
-                            :key="index"
-                            d-flex
-                            xs6
-                          >
-                            <v-card flat nuxt :to="{ name: 'index' }">
-                              <v-card-title primary-title>
-                                {{ news.title }}
-                              </v-card-title>
-                              <v-layout row wrap>
-                                <v-flex d-flex xs6>
-                                  <v-img :src="news.img"></v-img>
-                                </v-flex>
-                                <v-flex d-flex xs6>
-                                  <v-card-text>
-                                    {{ news.content }}
-                                  </v-card-text>
-                                </v-flex>
-                              </v-layout>
-                            </v-card>
-                          </v-flex>
-                        </v-layout>
+                        <TheMain2 :items="newsHN"/>
                       </v-flex>
                       <v-flex d-flex>
                         <v-layout row wrap>
                           <v-flex v-for="n in 2" :key="n" d-flex xs6>
-                            <v-card color="green lighten-3" flat>
-                              <v-card-text>Quảng cáo here</v-card-text>
-                            </v-card>
+                            <TheAdMid2/>
                           </v-flex>
                         </v-layout>
                       </v-flex>
                       <v-flex d-flex>
-                        <v-layout row wrap>
-                          <v-flex d-flex xs6>
-                            <v-card color="blue lighten-1" flat>
-                              <v-card-title
-                                primary-title
-                                nuxt
-                                :to="{ name: 'index' }"
-                              >
-                                {{ newsHN[0].title }}
-                              </v-card-title>
-                              <v-layout row wrap>
-                                <v-flex d-flex xs6>
-                                  <v-img :src="newsHN[0].img"></v-img>
-                                </v-flex>
-                                <v-flex d-flex xs6>
-                                  <v-card-text>
-                                    {{ newsHN[0].content }}
-                                  </v-card-text>
-                                </v-flex>
-                              </v-layout>
-                              <v-list three-line>
-                                <template v-for="(item, index) in today">
-                                  <v-list-tile :key="item.title" @click="">
-                                    <v-list-tile-content>
-                                      <v-list-tile-sub-title>{{
-                                        item.title
-                                      }}</v-list-tile-sub-title>
-                                    </v-list-tile-content>
-                                  </v-list-tile>
-                                  <v-divider
-                                    v-if="index + 1 < today.length"
-                                    :key="index"
-                                  ></v-divider>
-                                </template>
-                              </v-list>
-                            </v-card>
-                          </v-flex>
-                          <v-flex d-flex xs6>
-                            <v-layout column wrap>
-                              <v-flex v-for="n in 2" :key="n" d-flex xs6>
-                                <v-card color="blue lighten-1" flat>
-                                  <v-card-text>{{ text }}</v-card-text>
-                                </v-card>
-                              </v-flex>
-                            </v-layout>
-                          </v-flex>
-                        </v-layout>
+                        <TheMain3 :items="newsHN" :lists="today"/>
                       </v-flex>
                       <v-flex d-flex>
-                        <v-card color="yellow darken-4" flat>
-                          <v-card-text>{{ text }}</v-card-text>
-                        </v-card>
+                        <TheMain4/>
                       </v-flex>
                       <v-flex d-flex>
-                        <v-card color="brown darken-2" flat>
-                          <v-card-text>{{ text }}</v-card-text>
-                        </v-card>
+                        <TheMain5/>
                       </v-flex>
                     </v-layout>
                   </v-tab-item>
@@ -225,9 +58,7 @@
         </v-layout>
       </v-flex>
       <v-flex d-flex xs2>
-        <v-card color="grey lighten-2" dark>
-          <v-card-text>{{ lorem.slice(0, 30) }}</v-card-text>
-        </v-card>
+        <TheAdRight/>
       </v-flex>
     </v-layout>
   </v-container>
@@ -236,11 +67,29 @@
 <script>
 import TheRight1 from '~/components/SubIndex/TheRight1'
 import TheRight2 from '~/components/SubIndex/TheRight2'
+import TheMain1 from '~/components/SubIndex/TheMain1'
+import TheMain2 from '~/components/SubIndex/TheMain2'
+import TheMain3 from '~/components/SubIndex/TheMain3'
+import TheMain4 from '~/components/SubIndex/TheMain4'
+import TheMain5 from '~/components/SubIndex/TheMain5'
+import TheAdTopMid from '~/components/SubIndex/TheAdTopMid'
+import TheAdLeft from '~/components/SubIndex/TheAdLeft'
+import TheAdRight from '~/components/SubIndex/TheAdRight'
+import TheAdMid2 from '~/components/SubIndex/TheAdMid2'
 
 export default {
   components: {
     TheRight1,
-    TheRight2
+    TheRight2,
+    TheMain1,
+    TheMain2,
+    TheMain3,
+    TheMain4,
+    TheMain5,
+    TheAdTopMid,
+    TheAdLeft,
+    TheAdRight,
+    TheAdMid2
   },
   layout: 'homeWithSidebar',
   data: function() {
