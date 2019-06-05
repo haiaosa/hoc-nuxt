@@ -9,7 +9,7 @@
         </v-toolbar-items>
       </v-toolbar>
 
-      <v-list three-line>
+      <v-list three-line dense>
         <template v-for="(item, index) in items[1]">
           <v-list-tile :key="item.subtitle" avatar @click="">
             <v-list-tile-avatar>

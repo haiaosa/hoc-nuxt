@@ -37,10 +37,10 @@
                         <TheMain3 :items="newsHN" :lists="today"/>
                       </v-flex>
                       <v-flex d-flex>
-                        <TheMain4/>
+                        <TheMain4 :items="companies" title="Thông tin doanh nghiệp"/>
                       </v-flex>
                       <v-flex d-flex>
-                        <TheMain5/>
+                        <TheMain5 :items="girls" title="Dành riêng cho phái đẹp"/>
                       </v-flex>
                     </v-layout>
                   </v-tab-item>
@@ -115,6 +115,12 @@ export default {
     },
     today() {
       return this.$store.state.newsHN.today
+    },
+    companies() {
+      return this.$store.state.companies.companies
+    },
+    girls() {
+      return this.$store.state.girls.girls
     }
   }
 }

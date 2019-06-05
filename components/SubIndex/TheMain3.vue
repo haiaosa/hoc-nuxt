@@ -19,7 +19,7 @@
             </v-card-text>
           </v-flex>
         </v-layout>
-        <v-list three-line>
+        <v-list three-line dense>
           <template v-for="(item, index) in lists">
             <v-list-tile :key="item.title" @click="">
               <v-list-tile-content>
