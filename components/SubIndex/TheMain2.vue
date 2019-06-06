@@ -1,23 +1,22 @@
 <template>
   <v-layout row wrap>
-    <v-flex
-      v-for="(news, index) in items"
-      :key="index"
-      d-flex
-      xs6
-    >
-      <v-card flat nuxt :to="{ name: 'index' }">
-        <v-card-title primary-title>
-          {{ news.title }}
-        </v-card-title>
+    <v-flex v-for="(news, index) in items" :key="index" d-flex xs6>
+      <v-card nuxt :to="{ name: 'note' }">
         <v-layout row wrap>
-          <v-flex d-flex xs6>
+          <v-flex xs12>
+            <v-card-title primary-title>
+              <div class="body-1">{{ news.title }}</div>
+            </v-card-title>
+          </v-flex>
+          <v-flex xs4>
             <v-img :src="news.img"></v-img>
           </v-flex>
-          <v-flex d-flex xs6>
-            <v-card-text>
-              {{ news.content }}
-            </v-card-text>
+          <v-flex xs8>
+            <div>
+              <v-card-text class="caption">
+                {{ news.content }}
+              </v-card-text>
+            </div>
           </v-flex>
         </v-layout>
       </v-card>
@@ -25,7 +24,7 @@
   </v-layout>
 </template>
 <script>
-  export default {
-    props: ['items']
-  }
+export default {
+  props: ['items']
+}
 </script>
