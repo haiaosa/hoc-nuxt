@@ -7,7 +7,9 @@
         nuxt
         :to="{ name: 'index' }"
       >
-        <v-img :src="require('~/assets/1.jpg')">
+        <v-img
+          :src="require('~/assets/1.jpg')"
+          gradient="to bottom, rgba(255,255,255,.0), rgba(0,0,0,.9)">
           <v-layout
             align-end
             justify-start
@@ -36,7 +38,9 @@
             nuxt
             :to="{ name: 'index' }"
           >
-            <v-img :src="require('~/assets/2.jpg')">
+            <v-img
+              :src="require('~/assets/2.jpg')"
+              gradient="to bottom, rgba(255,255,255,.0), rgba(0,0,0,.9)">
               <v-layout
                 align-end
                 justify-start
@@ -61,7 +65,9 @@
             nuxt
             :to="{ name: 'index' }"
           >
-            <v-img :src="require('~/assets/3.jpg')">
+            <v-img
+              :src="require('~/assets/3.jpg')"
+              gradient="to bottom, rgba(255,255,255,.0), rgba(0,0,0,.9)">
               <v-layout
                 align-end
                 justify-start
