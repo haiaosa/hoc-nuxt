@@ -32,7 +32,7 @@
                   </v-card-actions>
                 </v-flex>
                 <v-flex xs11>
-                  <v-tooltip top>
+                  <v-tooltip color="purple" top>
                     <template v-slot:activator="{ on }">
                       <v-card-text v-on="on" class="text-truncate body-1">
                         {{ item.title }}
@@ -46,11 +46,24 @@
           </v-flex>
         </v-layout>
       </v-flex>
+      <v-flex>
+        <div class="text-xs-center">
+          <v-pagination
+            v-model="page"
+            :length="6"
+          ></v-pagination>
+        </div>
+      </v-flex>
   </v-layout>
 </template>
 <script>
 export default {
-  props: ['items', 'title']
+  props: ['items', 'title'],
+  data () {
+    return {
+      page: 1
+    }
+  }
 }
 </script>
 <style scoped>

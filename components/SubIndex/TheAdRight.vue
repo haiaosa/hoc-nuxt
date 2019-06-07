@@ -1,6 +1,6 @@
 <template>
-  <v-card color="grey lighten-2 purple--text" dark>
-    <v-card-text>{{ lorem }}</v-card-text>
+  <v-card color="grey lighten-2 purple--text d-none" dark>
+    <!-- <v-card-text>{{ lorem }}</v-card-text> -->
   </v-card>
 </template>
 <script>
