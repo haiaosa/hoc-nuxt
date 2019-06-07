@@ -1,6 +1,11 @@
 <template>
-  <v-card color="green lighten-3" flat>
-    <v-card-text>Quảng cáo here</v-card-text>
+  <v-card color="green lighten-3" flat img>
+    <!-- <v-img
+          src="https://cdn.vuetifyjs.com/images/cards/desert.jpg"
+        ></v-img> -->
+    <v-card-text>
+      abcccccccccccc
+    </v-card-text>
   </v-card>
 </template>
 <script>

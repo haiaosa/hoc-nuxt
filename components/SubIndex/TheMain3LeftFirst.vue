@@ -1,5 +1,5 @@
 <template>
-  <v-card nuxt :to="{ name: 'note' }">
+  <v-card hover nuxt :to="{ name: 'note' }">
     <v-layout row wrap>
       <v-flex xs12>
         <v-card-title primary-title>

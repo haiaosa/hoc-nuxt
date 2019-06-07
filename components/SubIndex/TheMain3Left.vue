@@ -1,6 +1,5 @@
 <template>
   <v-layout column wrap>
-    <v-card>
       <v-flex>
         <v-toolbar color="primary">
           <v-toolbar-items>
@@ -28,7 +27,6 @@
           </v-flex>
         </v-layout>
       </v-flex>
-    </v-card>
   </v-layout>
 </template>
 <script>

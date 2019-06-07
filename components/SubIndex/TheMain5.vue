@@ -1,6 +1,5 @@
 <template>
   <v-layout column wrap>
-    <v-card color="purple lighten-2">
       <v-flex>
         <v-toolbar color="primary">
           <v-toolbar-items>
@@ -19,7 +18,6 @@
         <v-layout row wrap>
           <v-flex v-for="(item, index) in items" :key="index" xs6>
             <v-card
-              class="purple lighten-2"
               flat
               hover
               nuxt
@@ -48,7 +46,6 @@
           </v-flex>
         </v-layout>
       </v-flex>
-    </v-card>
   </v-layout>
 </template>
 <script>
