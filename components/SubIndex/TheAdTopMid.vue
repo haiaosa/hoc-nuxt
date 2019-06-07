@@ -1,5 +1,5 @@
 <template>
-  <v-flex d-flex>
+  <v-flex d-flex d-none>
     <v-card color="blue-grey lighten-1 red--text" dark>
       <v-card-text>
         <p class="display-4 text-uppercase text-xs-center">

@@ -26,7 +26,7 @@
                       <v-flex d-flex>
                         <TheMain2 :items="newsHN" title="Tin lung tung :D"/>
                       </v-flex>
-                      <v-flex d-flex>
+                      <v-flex d-flex d-none>
                         <v-layout row wrap>
                           <v-flex v-for="n in 2" :key="n" d-flex xs6>
                             <TheAdMid2/>
