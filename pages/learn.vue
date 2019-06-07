@@ -1,15 +1,46 @@
 <template>
-    <v-card color="green lighten-3" flat>
-    <v-img src="https://cdn.vuetifyjs.com/images/cards/road.jpg"></v-img>
-  </v-card>
+  <v-hover>
+    <v-card
+      slot-scope="{ hover }"
+      :class="`elevation-${hover ? 12 : 2}`"
+      class="mx-auto mt-5"
+      width="344"
+    >
+      <v-img
+        :aspect-ratio="16/9"
+        src="https://cdn.vuetifyjs.com/images/cards/cooking.png"
+      ></v-img>
+      <v-card-title>
+        <div>
+          <span class="headline">Cafe Badilico</span>
+          <div class="d-flex">
+            <v-rating
+              :value="value"
+              color="amber"
+              dense
+              half-increments
+              readonly
+              size="14"
+            ></v-rating>
+            <div class="ml-2 grey--text text--darken-2">
+              <span>{{ value }}</span>
+              <span>({{ reviews }})</span>
+            </div>
+          </div>
+        </div>
+        <v-spacer></v-spacer>
+        <v-btn icon class="mr-0">
+          <v-icon>mdi-chevron-right</v-icon>
+        </v-btn>
+      </v-card-title>
+    </v-card>
+  </v-hover>
 </template>
 <script>
-export default {
-  data() {
-    return {
-      card_text:
-        'Lorem ipsum dolor sit amet, brute iriure accusata ne mea. Eos suavitate referrentur ad, te duo agam libris qualisque, utroque quaestio accommodare no qui. Et percipit laboramus usu, no invidunt verterem nominati mel. Dolorem ancillae an mei, ut putant invenire splendide mel, ea nec propriae adipisci. Ignota salutandi accusamus in sed, et per malis fuisset, qui id ludus appareat.'
-    }
+  export default {
+    data: () => ({
+      reviews: 413,
+      value: 4.5
+    })
   }
-}
 </script>
