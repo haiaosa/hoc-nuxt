@@ -7,26 +7,7 @@
         nuxt
         :to="{ name: 'index' }"
       >
-        <v-img
-          :src="require('~/assets/1.jpg')"
-          gradient="to bottom, rgba(255,255,255,.0), rgba(0,0,0,.9)">
-          <v-layout
-            align-end
-            justify-start
-            row
-            wrap
-            fill-height
-          >
-            <v-flex xs12>
-              <v-card-title>
-                Cá chết hàng loạt nổi trắng hồ Văn Chương
-              </v-card-title>
-              <v-card-text>
-                {{ items }}
-              </v-card-text>
-            </v-flex>
-          </v-layout>
-        </v-img>
+        <TheMain1Image :item="newsHN"/>
       </v-card>
     </v-flex>
     <v-flex d-flex xs4>
@@ -38,24 +19,7 @@
             nuxt
             :to="{ name: 'index' }"
           >
-            <v-img
-              :src="require('~/assets/2.jpg')"
-              gradient="to bottom, rgba(255,255,255,.0), rgba(0,0,0,.9)">
-              <v-layout
-                align-end
-                justify-start
-                row
-                wrap
-                fill-height
-              >
-                <v-flex xs12>
-                  <v-card-title>
-                    Ba năm Hà Nội trả hơn 7 tỷ thuê phần
-                    mềm của Nhật Cường
-                  </v-card-title>
-                </v-flex>
-              </v-layout>
-            </v-img>
+            <TheMain1Image :item="newsHN"/>
           </v-card>
         </v-flex>
         <v-flex>
@@ -65,24 +29,7 @@
             nuxt
             :to="{ name: 'index' }"
           >
-            <v-img
-              :src="require('~/assets/3.jpg')"
-              gradient="to bottom, rgba(255,255,255,.0), rgba(0,0,0,.9)">
-              <v-layout
-                align-end
-                justify-start
-                row
-                wrap
-                fill-height
-              >
-                <v-flex xs12>
-                  <v-card-title>
-                    Về "chung một nhà", 8 sở ngành Hà Nội
-                    hoạt động thế nào?
-                  </v-card-title>
-                </v-flex>
-              </v-layout>
-            </v-img>
+            <TheMain1Image :item="newsHN"/>
           </v-card>
         </v-flex>
       </v-layout>
@@ -90,7 +37,16 @@
   </v-layout>
 </template>
 <script>
+import TheMain1Image from '~/components/SubIndex/TheMain1Image'
 export default {
-  props: ['items']
+  components: {
+    TheMain1Image
+  },
+  props: ['items'],
+  computed: {
+    newsHN() {
+      return this.$store.state.newsHN.newsHN[0]
+    }
+  }
 }
 </script>
