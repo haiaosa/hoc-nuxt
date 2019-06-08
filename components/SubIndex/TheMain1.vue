@@ -1,21 +1,23 @@
 <template>
   <v-layout row wrap>
-    <v-flex d-flex xs8>
+    <v-flex xs8>
       <v-card
         color="yellow darken-1"
         flat
+        tile
         nuxt
         :to="{ name: 'index' }"
       >
         <TheMain1Image :item="newsHN"/>
       </v-card>
     </v-flex>
-    <v-flex d-flex xs4>
+    <v-flex xs4>
       <v-layout column wrap>
         <v-flex>
           <v-card
             color="yellow darken-4"
             flat
+            tile
             nuxt
             :to="{ name: 'index' }"
           >
@@ -26,6 +28,7 @@
           <v-card
             color="yellow darken-4"
             flat
+            tile
             nuxt
             :to="{ name: 'index' }"
           >

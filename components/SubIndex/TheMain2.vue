@@ -1,13 +1,6 @@
 <template>
   <v-layout column wrap>
     <v-flex>
-      <v-toolbar color="primary">
-        <v-toolbar-items>
-          <v-btn flat :ripple="false" class="custom-btn" nuxt :to="{ name: 'note' }">{{ title }}</v-btn>
-        </v-toolbar-items>
-      </v-toolbar>
-    </v-flex>
-    <v-flex>
       <v-layout row wrap>
         <v-flex v-for="(news, index) in items" :key="index" d-flex xs6>
           <v-hover>
@@ -50,7 +43,7 @@
 </template>
 <script>
 export default {
-  props: ['items','title'],
+  props: ['items'],
   data: () => ({
     reviews: 413,
     value: 4.5,

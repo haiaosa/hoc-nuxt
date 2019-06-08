@@ -1,5 +1,5 @@
 <template>
-  <v-responsive :aspect-ratio="2/1">
+  <v-responsive>
     <v-img
     :src="item.img"
     gradient="to bottom, rgba(255,255,255,.0), rgba(0,0,0,.9)">
@@ -11,12 +11,9 @@
         fill-height
       >
         <v-flex xs12>
-          <v-card-title>
+          <v-card-title class="pb-0">
             {{ item.title }}
           </v-card-title>
-          <v-card-text>
-            {{ item.content }}
-          </v-card-text>
         </v-flex>
       </v-layout>
     </v-img>

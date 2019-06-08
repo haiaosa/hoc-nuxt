@@ -24,7 +24,7 @@
                         <TheMain1 :items="text"/>
                       </v-flex>
                       <v-flex d-flex>
-                        <TheMain2 :items="newsHN" title="Tin lung tung :D"/>
+                        <TheMain2 :items="newsHN"/>
                       </v-flex>
                       <v-flex d-flex d-none>
                         <v-layout row wrap>

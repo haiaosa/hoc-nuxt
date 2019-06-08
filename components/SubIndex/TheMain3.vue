@@ -1,7 +1,14 @@
 <template>
   <v-layout row wrap>
     <v-flex d-flex xs6>
-      <TheMain3Left :items="items" :lists="lists" title="Tin tức trong ngày" />
+      <v-layout column wrap>
+        <v-flex d-flex xs6>
+          <TheMain3Left :items="items" :lists="lists" title="Tin tức trong ngày" />
+        </v-flex>
+        <v-flex d-flex xs6>
+          <TheMain3Left :items="items" :lists="lists" title="Tin Pháp luật" />
+        </v-flex>
+      </v-layout>
     </v-flex>
     <v-flex d-flex xs6>
       <v-layout column wrap>
