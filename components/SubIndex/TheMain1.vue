@@ -2,7 +2,6 @@
   <v-layout row wrap>
     <v-flex xs8>
       <v-card
-        color="yellow darken-1"
         flat
         tile
         nuxt
@@ -15,7 +14,6 @@
       <v-layout column wrap>
         <v-flex>
           <v-card
-            color="yellow darken-4"
             flat
             tile
             nuxt
@@ -26,9 +24,9 @@
         </v-flex>
         <v-flex>
           <v-card
-            color="yellow darken-4"
             flat
             tile
+            min-height="150"
             nuxt
             :to="{ name: 'index' }"
           >

@@ -2,7 +2,8 @@
   <v-responsive>
     <v-img
     :src="item.img"
-    gradient="to bottom, rgba(255,255,255,.0), rgba(0,0,0,.9)">
+    gradient="to bottom, rgba(255,255,255,.0), rgba(0,0,0,.9)"
+    aspect-ratio="1.55">
       <v-layout
         align-end
         justify-start
