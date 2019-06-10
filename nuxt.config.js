@@ -91,3 +91,12 @@ export default {
     extend(config, ctx) {}
   }
 }
+module.exports = {
+  build: {
+    transpile: ['vue-line-clamp']
+  },
+  plugins: [
+    // ssr: false to only include it on client-side
+    { src: '~/plugins/vue-line-clamp.js', ssr: false }
+  ]
+}
