@@ -8,7 +8,8 @@
               slot-scope="{ hover }"
               :class="`elevation-${hover ? 12 : 2}`"
               nuxt
-              :to="{ name: 'note' }">
+              :to="{ name: 'note' }"
+            >
               <v-layout row wrap>
                 <v-flex xs12>
                   <v-card-title primary-title>
@@ -33,10 +34,7 @@
     </v-flex>
     <v-flex>
       <div class="text-xs-center">
-        <v-pagination
-          v-model="page"
-          :length="4"
-        ></v-pagination>
+        <v-pagination v-model="page" :length="4"></v-pagination>
       </div>
     </v-flex>
   </v-layout>
