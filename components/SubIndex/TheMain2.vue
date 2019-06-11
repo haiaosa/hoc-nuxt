@@ -20,11 +20,12 @@
                   <v-img :src="news.img"></v-img>
                 </v-flex>
                 <v-flex xs8>
-                  <div>
-                    <v-card-text class="caption pt-0" v-line-clamp="5">
+                  <!-- <v-card-text class="caption pt-0" v-line-clamp="5">
                       {{ news.content }}
-                    </v-card-text>
-                  </div>
+                    </v-card-text> -->
+                  <v-card-text class="caption pt-0" v-clampy="5">
+                    {{ news.content }}
+                  </v-card-text>
                 </v-flex>
               </v-layout>
             </v-card>

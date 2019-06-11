@@ -45,7 +45,8 @@ export default {
   plugins: [
     '~/plugins/axios',
     // chi can khai bao vue-line-clamp cho nay thoi
-    { src: '~/plugins/vue-line-clamp.js', ssr: false }
+    { src: '~/plugins/vue-line-clamp.js', ssr: false },
+    { src: '~/plugins/vue-clampy.js', ssr: false }
   ],
 
   /*
