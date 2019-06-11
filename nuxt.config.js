@@ -89,6 +89,23 @@ export default {
      ** You can extend webpack config here
      */
     extend(config, ctx) {}
+  },
+  /*
+   ** Page transition config
+   */
+  transition: {
+    name: 'page',
+    mode: 'in-out',
+    beforeEnter(el) {
+      console.log('Before enter...')
+    }
+  },
+  /*
+   ** Layout transition config
+   */
+  layoutTransition: {
+    name: 'layout',
+    mode: 'in-out'
   }
 }
 module.exports = {
