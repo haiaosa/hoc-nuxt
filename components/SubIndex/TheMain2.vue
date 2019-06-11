@@ -21,7 +21,7 @@
                 </v-flex>
                 <v-flex xs8>
                   <div>
-                    <v-card-text class="caption pt-0">
+                    <v-card-text class="caption pt-0" v-line-clamp="5">
                       {{ news.content }}
                     </v-card-text>
                   </div>

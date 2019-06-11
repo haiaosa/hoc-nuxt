@@ -24,7 +24,11 @@
       <v-card-title primary-title>
         <div>
           <h3 class="headline mb-0">aaaaaaaaaaaaaaa</h3>
-          <div v-clampy="3">{{ card_text }}</div>
+          <!-- <div v-clampy="3">{{ card_text }}</div> -->
+          <v-divider></v-divider>.
+          <v-divider></v-divider>
+
+          <div v-line-clamp="6">{{ card_text }}</div>
         </div>
       </v-card-title>
     </v-flex>

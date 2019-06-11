@@ -42,7 +42,11 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['~/plugins/axios'],
+  plugins: [
+    '~/plugins/axios',
+    // chi can khai bao vue-line-clamp cho nay thoi
+    { src: '~/plugins/vue-line-clamp.js', ssr: false }
+  ],
 
   /*
    ** Nuxt.js modules
@@ -107,13 +111,4 @@ export default {
     name: 'layout',
     mode: 'in-out'
   }
-}
-module.exports = {
-  build: {
-    transpile: ['vue-line-clamp']
-  },
-  plugins: [
-    // ssr: false to only include it on client-side
-    { src: '~/plugins/vue-line-clamp.js', ssr: false }
-  ]
 }
