@@ -2,7 +2,7 @@
   <v-layout row wrap>
     <v-flex v-for="n in 2" :key="n" d-flex xs6>
       <v-card color="purple darken-2" dark>
-        <v-card-text>{{ lorem.slice(0, 30) }}</v-card-text>
+        <v-card-text>Ad here</v-card-text>
       </v-card>
     </v-flex>
   </v-layout>

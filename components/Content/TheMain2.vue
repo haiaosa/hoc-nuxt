@@ -1,11 +1,23 @@
 <template>
-  <v-layout row wrap>
-    <v-flex v-for="n in 6" :key="n" d-flex xs4>
-      <v-card color="purple lighten-2" dark>
-        <v-card-text>{{ lorem.slice(0, 30) }}</v-card-text>
-      </v-card>
-    </v-flex>
-  </v-layout>
+  <v-card>
+    <v-layout column wrap>
+      <v-flex>
+        <v-btn color="primary" flat block left>TIN LIÊN QUAN </v-btn>
+      </v-flex>
+      <v-flex>
+        <v-layout row wrap>
+          <v-flex v-for="n in 6" :key="n" d-flex xs4>
+            <v-card hover nuxt :to="{ name: 'note' }">
+              <v-img :src="require('~/assets/7.jpg')"></v-img>
+              <v-card-title primary-title>
+                Nhà thổ lớn nhất thế giới thách thức robot tình dục
+              </v-card-title>
+            </v-card>
+          </v-flex>
+        </v-layout>
+      </v-flex>
+    </v-layout>
+  </v-card>
 </template>
 
 <script>
