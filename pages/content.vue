@@ -2,111 +2,64 @@
   <v-container fluid grid-list-md>
     <v-layout row wrap>
       <v-flex d-flex xs2>
-        <v-card color="grey lighten-2" dark>
-          <v-card-text>{{ lorem.slice(0, 30) }}</v-card-text>
-        </v-card>
+        <TheAdLeft />
       </v-flex>
       <v-flex d-flex xs8>
         <v-layout column wrap>
           <v-flex d-flex>
-            <v-card>
-              <v-card-title primary-title>
-                <div>
-                  <p class="display-2 mb-0">
-                    Mỹ đang lo ngại vì nguy cơ bị thua thiệt trước Trung Quốc?
-                  </p>
-                  <br />
-                  <p class="subheading mb-0 font-weight-medium">
-                    Sự hiện diện quân sự ngày càng lớn của Trung Quốc ở Châu Phi
-                    đang khiến Washington thực sự lo sợ, khi các quan chức Lầu
-                    Năm Góc bày tỏ quan ngại rằng Bắc Kinh đang giành được lòng
-                    tin từ nhiều nước vốn là đồng minh của Mỹ trong khu vực.
-                  </p>
-                  <br />
-                  <p class="body-1">{{ lorem }}</p>
-                </div>
-              </v-card-title>
-              <v-card-actions>
-                <v-btn flat color="orange">Share Fanpage</v-btn>
-                <v-btn flat color="blue">Share Facebook</v-btn>
-                <v-spacer></v-spacer>
-                <p class="body-1">Anh Tuấn (Infonet)</p>
-              </v-card-actions>
-            </v-card>
+            <TheMain1 />
           </v-flex>
           <v-flex d-flex>
-            <v-layout row wrap>
-              <v-flex v-for="n in 6" :key="n" d-flex xs4>
-                <v-card color="purple lighten-2" dark>
-                  <v-card-text>{{ lorem.slice(0, 30) }}</v-card-text>
-                </v-card>
-              </v-flex>
-            </v-layout>
+            <TheMain2 />
           </v-flex>
           <v-flex d-flex>
-            <v-layout row wrap>
-              <v-flex v-for="n in 4" :key="n" d-flex xs3>
-                <v-card color="purple lighten-4" dark>
-                  <v-card-text>{{ lorem.slice(0, 30) }}</v-card-text>
-                </v-card>
-              </v-flex>
-            </v-layout>
+            <TheMain3 />
           </v-flex>
           <v-flex d-flex>
-            <v-layout row wrap>
-              <v-flex v-for="n in 2" :key="n" d-flex xs6>
-                <v-card color="purple darken-2" dark>
-                  <v-card-text>{{ lorem.slice(0, 30) }}</v-card-text>
-                </v-card>
-              </v-flex>
-            </v-layout>
+            <TheAdMid1 />
           </v-flex>
           <v-flex d-flex>
-            <v-layout column wrap>
-              <v-flex d-flex>
-                <v-card color="yellow darken-1" dark>
-                  <v-card-text>{{ lorem.slice(0, 30) }}</v-card-text>
-                </v-card>
-              </v-flex>
-              <v-flex d-flex>
-                <v-layout row wrap>
-                  <v-flex v-for="n in 4" :key="n" d-flex xs3>
-                    <v-card color="yellow darken-1" dark>
-                      <v-card-text>{{ lorem.slice(0, 30) }}</v-card-text>
-                    </v-card>
-                  </v-flex>
-                </v-layout>
-              </v-flex>
-            </v-layout>
+            <TheMain4 />
           </v-flex>
           <v-flex d-flex>
-            <v-layout row wrap>
-              <v-flex v-for="n in 2" :key="n" d-flex xs6>
-                <v-card color="yellow darken-3" dark>
-                  <v-card-text>{{ lorem.slice(0, 30) }}</v-card-text>
-                </v-card>
-              </v-flex>
-            </v-layout>
+            <TheMain5 />
           </v-flex>
           <v-flex d-flex>
-            <v-card color="blue darken-3" dark>
-              <v-card-text>{{ lorem.slice(0, 30) }}</v-card-text>
-            </v-card>
+            <TheMain6 />
           </v-flex>
         </v-layout>
       </v-flex>
       <v-flex d-flex xs2>
-        <v-card color="grey lighten-2" dark>
-          <v-card-text>{{ lorem.slice(0, 30) }}</v-card-text>
-        </v-card>
+        <TheAdRight />
       </v-flex>
     </v-layout>
   </v-container>
 </template>
 
 <script>
+import TheMain1 from '~/components/Content/TheMain1'
+import TheMain2 from '~/components/Content/TheMain2'
+import TheMain3 from '~/components/Content/TheMain3'
+import TheAdMid1 from '~/components/Content/TheAdMid1'
+import TheMain4 from '~/components/Content/TheMain4'
+import TheMain5 from '~/components/Content/TheMain5'
+import TheMain6 from '~/components/Content/TheMain6'
+import TheAdLeft from '~/components/AllAds/TheAdLeft'
+import TheAdRight from '~/components/AllAds/TheAdRight'
+
 export default {
   layout: 'homeWithSidebar',
+  components: {
+    TheMain1,
+    TheMain2,
+    TheMain3,
+    TheMain4,
+    TheMain5,
+    TheMain6,
+    TheAdMid1,
+    TheAdLeft,
+    TheAdRight
+  },
   data: function() {
     return {
       active: null,

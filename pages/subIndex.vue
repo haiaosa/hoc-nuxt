@@ -2,11 +2,11 @@
   <v-container fluid grid-list-md>
     <v-layout row wrap>
       <v-flex d-flex xs2>
-        <TheAdLeft/>
+        <TheAdLeft />
       </v-flex>
       <v-flex d-flex xs8>
         <v-layout column wrap>
-          <TheAdTopMid/>
+          <TheAdTopMid />
           <v-flex d-flex>
             <v-layout row wrap>
               <v-flex d-flex xs8>
@@ -21,26 +21,32 @@
                   <v-tab-item v-for="n in 3" :key="n">
                     <v-layout column wrap mt-1>
                       <v-flex d-flex>
-                        <TheMain1 :items="text"/>
+                        <TheMain1 :items="text" />
                       </v-flex>
                       <v-flex d-flex>
-                        <TheMain2 :items="newsHN"/>
+                        <TheMain2 :items="newsHN" />
                       </v-flex>
                       <v-flex d-flex d-none>
                         <v-layout row wrap>
                           <v-flex v-for="n in 2" :key="n" d-flex xs6>
-                            <TheAdMid2/>
+                            <TheAdMid2 />
                           </v-flex>
                         </v-layout>
                       </v-flex>
                       <v-flex d-flex>
-                        <TheMain3 :items="newsHN" :lists="today"/>
+                        <TheMain3 :items="newsHN" :lists="today" />
                       </v-flex>
                       <v-flex d-flex>
-                        <TheMain4 :items="companies" title="Thông tin doanh nghiệp"/>
+                        <TheMain4
+                          :items="companies"
+                          title="Thông tin doanh nghiệp"
+                        />
                       </v-flex>
                       <v-flex d-flex>
-                        <TheMain5 :items="girls" title="Dành riêng cho phái đẹp"/>
+                        <TheMain5
+                          :items="girls"
+                          title="Dành riêng cho phái đẹp"
+                        />
                       </v-flex>
                     </v-layout>
                   </v-tab-item>
@@ -58,7 +64,7 @@
         </v-layout>
       </v-flex>
       <v-flex d-flex xs2>
-        <TheAdRight/>
+        <TheAdRight />
       </v-flex>
     </v-layout>
   </v-container>
@@ -73,8 +79,8 @@ import TheMain3 from '~/components/SubIndex/TheMain3'
 import TheMain4 from '~/components/SubIndex/TheMain4'
 import TheMain5 from '~/components/SubIndex/TheMain5'
 import TheAdTopMid from '~/components/SubIndex/TheAdTopMid'
-import TheAdLeft from '~/components/SubIndex/TheAdLeft'
-import TheAdRight from '~/components/SubIndex/TheAdRight'
+import TheAdLeft from '~/components/AllAds/TheAdLeft'
+import TheAdRight from '~/components/AllAds/TheAdRight'
 import TheAdMid2 from '~/components/SubIndex/TheAdMid2'
 
 export default {
