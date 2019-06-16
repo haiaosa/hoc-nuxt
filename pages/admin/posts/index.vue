@@ -2,17 +2,11 @@
   <v-container fluid grid-list-md>
     <v-layout column wrap>
       <v-flex>
-        <v-card>
-          <v-card-title primary-title>
-            filter
-          </v-card-title>
-        </v-card>
+        <TheFilters />
       </v-flex>
       <v-flex>
         <v-card>
-          <v-card-title primary-title>
-            datas
-          </v-card-title>
+          <TheDatas />
         </v-card>
       </v-flex>
     </v-layout>
@@ -20,8 +14,15 @@
 </template>
 
 <script>
+import TheFilters from '~/components/Admin/Posts/TheFilters'
+import TheDatas from '~/components/Admin/Posts/TheDatas'
+
 export default {
-  layout: 'adminWithSidebar'
+  layout: 'adminWithSidebar',
+  components: {
+    TheFilters,
+    TheDatas
+  }
 }
 </script>
 

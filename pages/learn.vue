@@ -1,38 +1,78 @@
 <template>
   <v-flex>
-    <v-list three-line dense>
-      <template v-for="(item, index) in items">
-        <v-tooltip color="purple" top>
-          <template v-slot:activator="{ on }">
-            <v-list-tile v-on="on" :key="item.title" avatar @click="">
-              <v-list-tile-action>
-                <v-icon color="pink darken-4">minimize</v-icon>
-              </v-list-tile-action>
-              <v-list-tile-content>
-                <v-list-tile-sub-title>{{ item.title }}</v-list-tile-sub-title>
-              </v-list-tile-content>
-            </v-list-tile>
-            <v-divider v-if="index + 1 < items.length" :key="index"></v-divider>
-          </template>
-          <span>{{ item.title }}</span>
-        </v-tooltip>
-      </template>
+    <v-list>
+      <v-list-group
+        v-model="item.active"
+        v-for="item in items"
+        :key="item.title"
+        :prepend-icon="item.action"
+        no-action
+      >
+        <template v-slot:activator>
+          <v-list-tile>
+            <v-list-tile-content>
+              {{ item.title }}
+            </v-list-tile-content>
+          </v-list-tile>
+        </template>
+        <v-list-tile
+          v-for="subItem in item.items"
+          :key="subItem.title"
+          @click=""
+        >
+          <v-list-tile-action>
+            <v-icon>{{ subItem.action }}</v-icon>
+          </v-list-tile-action>
+          <v-list-tile-content>
+            {{ subItem.title }}
+          </v-list-tile-content>
+        </v-list-tile>
+      </v-list-group>
     </v-list>
   </v-flex>
 </template>
 <script>
 export default {
-  layout: 'homeWithSidebar',
-
+  layout: 'adminWithSidebar',
   data() {
     return {
-      valueDeterminate: 80
+      items: [
+        {
+          action: 'restaurant',
+          title: 'Dining',
+          items: [
+            { title: 'Breakfast & brunch' },
+            { title: 'New American' },
+            { title: 'Sushi' },
+            { title: 'Bướm' },
+            { title: 'Lồn' },
+            { title: 'Lỗ đít' },
+            { title: 'Lưỡi' }
+          ]
+        },
+        {
+          action: 'directions_run',
+          title: 'Family',
+          items: [{ title: 'List Item' }]
+        },
+        {
+          action: 'fingerprint',
+          title: 'Office',
+          items: [{ title: 'List Item' }]
+        },
+        {
+          action: 'local_offer',
+          title: 'Promotions',
+          items: [{ title: 'List Item' }]
+        },
+        {
+          action: 'commute',
+          title: 'Bướm khắm',
+          active: true,
+          items: [{ action: 'pregnant_woman', title: 'Bướm thối khắm' }]
+        }
+      ]
     }
   }
 }
 </script>
-<style scoped>
-.v-progress-circular {
-  margin: 1rem;
-}
-</style>

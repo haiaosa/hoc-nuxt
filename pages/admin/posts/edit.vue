@@ -5,26 +5,20 @@
         <v-btn color="primary">Edit page</v-btn>
       </v-flex>
       <v-flex>
-        <v-card>
-          <v-card-title primary-title>
-            filter
-          </v-card-title>
-        </v-card>
-      </v-flex>
-      <v-flex>
-        <v-card>
-          <v-card-title primary-title>
-            datas
-          </v-card-title>
-        </v-card>
+        <TheForm />
       </v-flex>
     </v-layout>
   </v-container>
 </template>
 
 <script>
+import TheForm from '~/components/Admin/Posts/TheForm'
+
 export default {
-  layout: 'adminWithSidebar'
+  layout: 'adminWithSidebar',
+  components: {
+    TheForm
+  }
 }
 </script>
 

@@ -70,12 +70,12 @@ export default {
   vuetify: {
     theme: {
       primary: '#00796B',
-      secondary: '#7C4DFF',
+      secondary: '#F57F17',
       accent: '#EF6C00',
       error: '#8D6E63',
       info: '#6A1B9A',
       success: '#E57373',
-      warning: '#00ACC1'
+      warning: '#29B6F6'
     }
   },
 
