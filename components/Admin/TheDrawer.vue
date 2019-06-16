@@ -20,7 +20,7 @@
           v-for="subItem in item.items"
           :key="subItem.title"
           nuxt
-          :to="{ name: 'note' }"
+          :to="{ name: 'admin-posts-add' }"
         >
           <v-list-tile-action>
             <v-icon>{{ subItem.action }}</v-icon>
