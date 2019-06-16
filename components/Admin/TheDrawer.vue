@@ -20,7 +20,7 @@
           v-for="subItem in item.items"
           :key="subItem.title"
           nuxt
-          :to="{ name: 'admin-posts-add' }"
+          :to="{ name: subItem.link }"
         >
           <v-list-tile-action>
             <v-icon>{{ subItem.action }}</v-icon>
@@ -41,20 +41,32 @@ export default {
         {
           action: 'dashboard',
           title: 'Dashboard',
-          items: [{ title: 'List Item' }]
+          active: true
         },
         {
           action: 'supervisor_account',
           title: 'User',
-          active: true,
           items: [
-            { action: 'fingerprint', title: 'Breakfast & brunch' },
-            { action: 'fingerprint', title: 'New American' },
-            { action: 'fingerprint', title: 'Sushi' },
-            { action: 'fingerprint', title: 'Bướm' },
-            { action: 'fingerprint', title: 'Lồn' },
-            { action: 'fingerprint', title: 'Lỗ đít' },
-            { action: 'fingerprint', title: 'Lưỡi' }
+            {
+              action: 'list',
+              title: 'Lists',
+              link: 'admin-posts'
+            },
+            {
+              action: 'note_add',
+              title: 'Add',
+              link: 'admin-posts-add'
+            },
+            {
+              action: 'lock_open',
+              title: 'Edit',
+              link: 'admin-posts-edit'
+            },
+            {
+              action: 'priority_high',
+              title: 'Delete',
+              link: 'admin-posts-delete'
+            }
           ]
         },
         {
