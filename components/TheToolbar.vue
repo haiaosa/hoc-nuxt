@@ -4,6 +4,7 @@
     <v-toolbar-title class="display-1">24h</v-toolbar-title>
     <v-spacer></v-spacer>
     <v-toolbar-items>
+      <v-btn flat nuxt :to="{ name: 'admin' }">Admin</v-btn>
       <v-btn flat nuxt :to="{ name: 'index' }">Bóng đá</v-btn>
       <v-btn flat nuxt :to="{ name: 'note' }">Kinh doanh</v-btn>
       <v-btn flat nuxt :to="{ name: 'note' }">Hi - Tech</v-btn>

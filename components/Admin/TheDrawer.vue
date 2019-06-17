@@ -1,6 +1,14 @@
 <template>
   <v-navigation-drawer app :value="drawer" class="secondary lighten-1">
     <v-list>
+      <v-list-tile nuxt :to="{ name: 'admin' }">
+        <v-list-tile-action>
+          <v-icon>dashboard</v-icon>
+        </v-list-tile-action>
+        <v-list-tile-content>
+          <v-list-tile-title>Dashboard</v-list-tile-title>
+        </v-list-tile-content>
+      </v-list-tile>
       <v-list-group
         v-for="item in items"
         :key="item.title"
@@ -39,18 +47,13 @@ export default {
     return {
       items: [
         {
-          action: 'dashboard',
-          title: 'Dashboard',
-          active: true
-        },
-        {
           action: 'supervisor_account',
           title: 'User',
           items: [
             {
               action: 'list',
               title: 'Lists',
-              link: 'admin-posts'
+              link: 'admin-posts-list'
             },
             {
               action: 'note_add',
@@ -72,32 +75,158 @@ export default {
         {
           action: 'bookmarks',
           title: 'Categories',
-          items: [{ title: 'List Item' }]
+          items: [
+            {
+              action: 'list',
+              title: 'Lists',
+              link: 'admin-posts-list'
+            },
+            {
+              action: 'note_add',
+              title: 'Add',
+              link: 'admin-posts-add'
+            },
+            {
+              action: 'lock_open',
+              title: 'Edit',
+              link: 'admin-posts-edit'
+            },
+            {
+              action: 'priority_high',
+              title: 'Delete',
+              link: 'admin-posts-delete'
+            }
+          ]
         },
         {
           action: 'local_parking',
           title: 'Posts',
-          items: [{ title: 'List Item' }]
+          items: [
+            {
+              action: 'list',
+              title: 'Lists',
+              link: 'admin-posts-list'
+            },
+            {
+              action: 'note_add',
+              title: 'Add',
+              link: 'admin-posts-add'
+            },
+            {
+              action: 'lock_open',
+              title: 'Edit',
+              link: 'admin-posts-edit'
+            },
+            {
+              action: 'priority_high',
+              title: 'Delete',
+              link: 'admin-posts-delete'
+            }
+          ]
         },
         {
           action: 'format_size',
           title: 'Tags',
-          items: [{ title: 'List Item' }]
+          items: [
+            {
+              action: 'list',
+              title: 'Lists',
+              link: 'admin-posts-list'
+            },
+            {
+              action: 'note_add',
+              title: 'Add',
+              link: 'admin-posts-add'
+            },
+            {
+              action: 'lock_open',
+              title: 'Edit',
+              link: 'admin-posts-edit'
+            },
+            {
+              action: 'priority_high',
+              title: 'Delete',
+              link: 'admin-posts-delete'
+            }
+          ]
         },
         {
           action: 'fingerprint',
           title: 'Roles',
-          items: [{ title: 'List Item' }]
+          items: [
+            {
+              action: 'list',
+              title: 'Lists',
+              link: 'admin-posts-list'
+            },
+            {
+              action: 'note_add',
+              title: 'Add',
+              link: 'admin-posts-add'
+            },
+            {
+              action: 'lock_open',
+              title: 'Edit',
+              link: 'admin-posts-edit'
+            },
+            {
+              action: 'priority_high',
+              title: 'Delete',
+              link: 'admin-posts-delete'
+            }
+          ]
         },
         {
           action: 'text_format',
           title: 'Advertisement',
-          items: [{ title: 'List Item' }]
+          items: [
+            {
+              action: 'list',
+              title: 'Lists',
+              link: 'admin-posts-list'
+            },
+            {
+              action: 'note_add',
+              title: 'Add',
+              link: 'admin-posts-add'
+            },
+            {
+              action: 'lock_open',
+              title: 'Edit',
+              link: 'admin-posts-edit'
+            },
+            {
+              action: 'priority_high',
+              title: 'Delete',
+              link: 'admin-posts-delete'
+            }
+          ]
         },
         {
           action: 'camera',
           title: 'View',
-          items: [{ action: 'local_offer', title: 'Bướm thối khắm' }]
+          items: [
+            {
+              action: 'list',
+              title: 'Lists',
+              link: 'admin-posts-list'
+            },
+            {
+              action: 'note_add',
+              title: 'Add',
+              link: 'admin-posts-add'
+            },
+            {
+              action: 'lock_open',
+              title: 'Edit',
+              link: 'admin-posts-edit'
+            },
+            {
+              action: 'priority_high',
+              title: 'Delete',
+              link: 'admin-posts-delete'
+            }
+          ]
         }
       ]
     }

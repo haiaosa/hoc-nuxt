@@ -4,7 +4,7 @@
     <v-toolbar-title class="display-1">Admin</v-toolbar-title>
     <v-spacer></v-spacer>
     <v-toolbar-items>
-      <v-btn flat nuxt :to="{ name: 'index' }">Dau buoi</v-btn>
+      <v-btn flat nuxt :to="{ name: 'admin' }">Admin</v-btn>
     </v-toolbar-items>
   </v-toolbar>
 </template>
