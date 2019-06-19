@@ -54,6 +54,8 @@
         <td class="text-xs-left">{{ props.item.carbs }}</td>
         <td class="text-xs-left">{{ props.item.protein }}</td>
         <td class="text-xs-left">{{ props.item.iron }}</td>
+        <td class="text-xs-left">{{ props.item.iron }}</td>
+        <td class="text-xs-left">{{ props.item.iron }}</td>
         <td class="justify-left layout px-0">
           <v-icon small class="secondary--text mr-2" @click="">
             edit
@@ -96,6 +98,8 @@ export default {
         { text: 'Author', value: 'carbs', align: 'left' },
         { text: 'Created Date', value: 'protein', align: 'left' },
         { text: 'Status', value: 'iron', align: 'left' },
+        { text: 'Status', value: 'iron', align: 'left' },
+        { text: 'Status', value: 'iron', align: 'left' },
         { text: 'Action', value: 'name', align: 'left', sortable: false }
       ],
       desserts: [
@@ -106,6 +110,8 @@ export default {
           fat: 6.0,
           carbs: 24,
           protein: 4.0,
+          iron: '1%',
+          iron: '1%',
           iron: '1%'
         },
         {
@@ -115,6 +121,8 @@ export default {
           fat: 9.0,
           carbs: 37,
           protein: 4.3,
+          iron: '1%',
+          iron: '1%',
           iron: '1%'
         },
         {
@@ -124,6 +132,8 @@ export default {
           fat: 16.0,
           carbs: 23,
           protein: 6.0,
+          iron: '7%',
+          iron: '7%',
           iron: '7%'
         },
         {
@@ -133,6 +143,8 @@ export default {
           fat: 3.7,
           carbs: 67,
           protein: 4.3,
+          iron: '8%',
+          iron: '8%',
           iron: '8%'
         },
         {
@@ -142,6 +154,8 @@ export default {
           fat: 16.0,
           carbs: 49,
           protein: 3.9,
+          iron: '16%',
+          iron: '16%',
           iron: '16%'
         },
         {
@@ -151,6 +165,8 @@ export default {
           fat: 0.0,
           carbs: 94,
           protein: 0.0,
+          iron: '0%',
+          iron: '0%',
           iron: '0%'
         },
         {
@@ -160,6 +176,8 @@ export default {
           fat: 0.2,
           carbs: 98,
           protein: 0,
+          iron: '2%',
+          iron: '2%',
           iron: '2%'
         },
         {
@@ -169,6 +187,8 @@ export default {
           fat: 3.2,
           carbs: 87,
           protein: 6.5,
+          iron: '45%',
+          iron: '45%',
           iron: '45%'
         },
         {
@@ -178,6 +198,8 @@ export default {
           fat: 25.0,
           carbs: 51,
           protein: 4.9,
+          iron: '22%',
+          iron: '22%',
           iron: '22%'
         },
         {
@@ -187,6 +209,8 @@ export default {
           fat: 26.0,
           carbs: 65,
           protein: 7,
+          iron: '6%',
+          iron: '6%',
           iron: '6%'
         },
         {
@@ -196,6 +220,8 @@ export default {
           fat: 63.0,
           carbs: 165,
           protein: 74,
+          iron: '30%',
+          iron: '30%',
           iron: '30%'
         }
       ]

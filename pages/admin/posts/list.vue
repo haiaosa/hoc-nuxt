@@ -1,14 +1,12 @@
 <template>
-  <v-container fluid grid-list-md>
-    <v-layout column wrap>
-      <v-flex>
-        <TheFilters />
-      </v-flex>
-      <v-flex>
-        <TheDatas />
-      </v-flex>
-    </v-layout>
-  </v-container>
+  <v-layout class="ma-2" column wrap>
+    <v-flex>
+      <TheFilters />
+    </v-flex>
+    <v-flex>
+      <TheDatas />
+    </v-flex>
+  </v-layout>
 </template>
 
 <script>
