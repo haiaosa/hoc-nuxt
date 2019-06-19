@@ -5,9 +5,7 @@
         <TheFilters />
       </v-flex>
       <v-flex>
-        <v-card>
-          <TheDatas />
-        </v-card>
+        <TheDatas />
       </v-flex>
     </v-layout>
   </v-container>

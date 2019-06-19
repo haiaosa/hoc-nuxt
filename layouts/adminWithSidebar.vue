@@ -4,7 +4,11 @@
     <TheToolbar />
 
     <v-content>
-      <v-progress-linear :indeterminate="true" height="1"></v-progress-linear>
+      <v-progress-linear
+        color="warning"
+        :indeterminate="true"
+        height="1"
+      ></v-progress-linear>
       <nuxt />
     </v-content>
 
