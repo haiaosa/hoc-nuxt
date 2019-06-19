@@ -49,9 +49,9 @@
         </td>
         <td class="text-xs-left">{{ props.item.id }}</td>
         <td class="text-xs-left">{{ props.item.name }}</td>
+        <td class="text-xs-left">{{ props.item.carbs }}</td>
         <td class="text-xs-left">{{ props.item.calories }}</td>
         <td class="text-xs-left">{{ props.item.fat }}</td>
-        <td class="text-xs-left">{{ props.item.carbs }}</td>
         <td class="text-xs-left">{{ props.item.protein }}</td>
         <td class="text-xs-left">{{ props.item.iron }}</td>
         <td class="justify-left layout px-0">
@@ -92,7 +92,7 @@ export default {
         { text: 'Title', value: 'name', align: 'left' },
         { text: 'Avatar', value: 'fat', align: 'left' },
         { text: 'Categories', value: 'calories', align: 'left' },
-        { text: 'Author', value: 'carbs', align: 'left' },
+        { text: 'Author', value: 'carbs', align: 'left', sortable: false },
         { text: 'Created Date', value: 'protein', align: 'left' },
         { text: 'Status', value: 'iron', align: 'left' },
         { text: 'Action', value: 'name', align: 'left', sortable: false }
@@ -100,99 +100,99 @@ export default {
       desserts: [
         {
           id: 1,
-          name: 'Frozen Yogurt',
-          calories: 159,
-          fat: 6.0,
+          name: 'Top Search Engine Optimization Strategies!',
+          calories: 'Events',
+          fat: 'haiaosa',
           carbs: 24,
           protein: 4.0,
           iron: '1%'
         },
         {
           id: 2,
-          name: 'Ice cream sandwich',
-          calories: 237,
-          fat: 9.0,
+          name: 'A Skin Cream That’s Proven To Work',
+          calories: 'Uncategorized',
+          fat: 'haiaosa',
           carbs: 37,
           protein: 4.3,
           iron: '1%'
         },
         {
           id: 3,
-          name: 'Eclair',
-          calories: 262,
-          fat: 16.0,
+          name: 'Are You Still Using That Slow, Old Typewriter?',
+          calories: 'Events',
+          fat: 'haiaosa',
           carbs: 23,
           protein: 6.0,
           iron: '7%'
         },
         {
           id: 4,
-          name: 'Cupcake',
-          calories: 305,
-          fat: 3.7,
+          name: '10,000 Web Site Visitors In One Month:Guaranteed',
+          calories: 'Events',
+          fat: 'haiaosa',
           carbs: 67,
           protein: 4.3,
           iron: '8%'
         },
         {
           id: 5,
-          name: 'Gingerbread',
-          calories: 356,
-          fat: 16.0,
+          name: 'Unlock The Secrets Of Selling High Ticket Items',
+          calories: 'Uncategorized',
+          fat: 'haiaosa',
           carbs: 49,
           protein: 3.9,
           iron: '16%'
         },
         {
           id: 6,
-          name: 'Jelly bean',
-          calories: 375,
-          fat: 0.0,
+          name: '10 Reasons To Start Your Own, Profitable Website!',
+          calories: 'Events',
+          fat: 'haiaosa',
           carbs: 94,
           protein: 0.0,
           iron: '0%'
         },
         {
           id: 7,
-          name: 'Lollipop',
-          calories: 392,
-          fat: 0.2,
+          name: 'Apple iMac with Retina 5K display review',
+          calories: 'Uncategorized',
+          fat: 'haiaosa',
           carbs: 98,
           protein: 0,
           iron: '2%'
         },
         {
           id: 8,
-          name: 'Honeycomb',
-          calories: 408,
-          fat: 3.2,
+          name: 'Simple Ways To Reduce Your Unwanted Wrinkles',
+          calories: 'New & Updates',
+          fat: 'haiaosa',
           carbs: 87,
           protein: 6.5,
           iron: '45%'
         },
         {
           id: 9,
-          name: 'Donut',
-          calories: 452,
-          fat: 25.0,
+          name: 'A Skin Cream That’s Proven To Work1',
+          calories: 'Business',
+          fat: 'haiaosa',
           carbs: 51,
           protein: 4.9,
           iron: '22%'
         },
         {
           id: 10,
-          name: 'KitKat',
-          calories: 518,
-          fat: 26.0,
+          name: 'Are You Still Using That Slow, Old Typewriter',
+          calories: 'Projects',
+          fat: 'haiaosa',
           carbs: 65,
           protein: 7,
           iron: '6%'
         },
         {
           id: 11,
-          name: 'Buom dem',
-          calories: 111,
-          fat: 63.0,
+          name: 'Used Car Dealer Sales Tricks Exposed',
+          calories: 'Portfolio',
+          fat: 'haiaosa',
           carbs: 165,
           protein: 74,
           iron: '30%'
