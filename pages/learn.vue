@@ -1,230 +1,159 @@
 <template>
   <v-card>
-    <v-card-title>
-      Posts
+    <v-toolbar card color="grey lighten-3">
+      <v-icon>mdi-silverware</v-icon>
+      <v-toolbar-title>Local hotspots</v-toolbar-title>
+    </v-toolbar>
+
+    <v-layout>
+      <v-flex>
+        <v-card-text>
+          <v-treeview
+            v-model="tree"
+            :load-children="fetch"
+            :items="items"
+            activatable
+            active-class="grey lighten-4 indigo--text"
+            selected-color="indigo"
+            open-on-click
+            selectable
+            expand-icon="mdi-chevron-down"
+            on-icon="mdi-bookmark"
+            off-icon="mdi-bookmark-outline"
+            indeterminate-icon="mdi-bookmark-minus"
+          >
+          </v-treeview>
+        </v-card-text>
+      </v-flex>
+
+      <v-divider vertical></v-divider>
+
+      <v-flex xs12 md6>
+        <v-card-text>
+          <div
+            v-if="selections.length === 0"
+            key="title"
+            class="title font-weight-light grey--text pa-3 text-xs-center"
+          >
+            Select your favorite breweries
+          </div>
+
+          <v-scroll-x-transition group hide-on-leave>
+            <v-chip
+              v-for="(selection, i) in selections"
+              :key="i"
+              color="grey"
+              dark
+              small
+            >
+              <v-icon left small>mdi-beer</v-icon>
+              {{ selection.name }}
+            </v-chip>
+          </v-scroll-x-transition>
+        </v-card-text>
+      </v-flex>
+    </v-layout>
+
+    <v-divider></v-divider>
+
+    <v-card-actions>
+      <v-btn flat @click="tree = []">
+        Reset
+      </v-btn>
+
       <v-spacer></v-spacer>
-      <v-text-field
-        v-model="search"
-        append-icon="search"
-        label="Search"
-        single-line
-        hide-details
-      ></v-text-field>
-    </v-card-title>
-    <v-data-table
-      v-model="selected"
-      :headers="headers"
-      :items="desserts"
-      :pagination.sync="pagination"
-      select-all
-      item-key="name"
-      class="elevation-1"
-      :loading="true"
-      :search="search"
-    >
-      <v-progress-linear
-        v-slot:progress
-        color="blue"
-        indeterminate
-      ></v-progress-linear>
-      <template slot="headerCell" slot-scope="props">
-        <v-tooltip bottom>
-          <template v-slot:activator="{ on }">
-            <span v-on="on">
-              {{ props.header.text }}
-            </span>
-          </template>
-          <span>
-            {{ props.header.text }}
-          </span>
-        </v-tooltip>
-      </template>
-      <template v-slot:items="props">
-        <td>
-          <v-checkbox
-            v-model="props.selected"
-            primary
-            hide-details
-          ></v-checkbox>
-        </td>
-        <td class="text-xs-left">{{ props.item.id }}</td>
-        <td class="text-xs-left">{{ props.item.name }}</td>
-        <td class="text-xs-left">{{ props.item.calories }}</td>
-        <td class="text-xs-left">{{ props.item.fat }}</td>
-        <td class="text-xs-left">{{ props.item.carbs }}</td>
-        <td class="text-xs-left">{{ props.item.protein }}</td>
-        <td class="text-xs-left">{{ props.item.iron }}</td>
-        <td class="text-xs-left">{{ props.item.iron }}</td>
-        <td class="text-xs-left">{{ props.item.iron }}</td>
-        <td class="justify-left layout px-0">
-          <v-icon small class="secondary--text mr-2" @click="">
-            edit
-          </v-icon>
-          <v-icon small class="secondary--text " @click="">
-            delete
-          </v-icon>
-        </td>
-      </template>
-      <template v-slot:no-data>
-        <v-alert :value="true" color="error" icon="warning">
-          Sorry, nothing to display here :(
-        </v-alert>
-      </template>
-      <template v-slot:no-results>
-        <v-alert :value="true" color="error" icon="warning">
-          Your search for "{{ search }}" found no results.
-        </v-alert>
-      </template>
-      <template v-slot:pageText="props">
-        Hiển thị từ {{ props.pageStart }} đến {{ props.pageStop }} trong tổng số
-        {{ props.itemsLength }} bản ghi.
-      </template>
-    </v-data-table>
+
+      <v-btn class="white--text" color="green darken-1" depressed>
+        Save
+        <v-icon right>mdi-content-save</v-icon>
+      </v-btn>
+    </v-card-actions>
   </v-card>
 </template>
 <script>
 export default {
-  layout: 'adminWithSidebar',
-  data() {
-    return {
-      search: '',
-      pagination: { sortBy: 'name' },
-      selected: [],
-      headers: [
-        { text: 'ID', value: 'id', align: 'left' },
-        { text: 'Title', value: 'name', align: 'left' },
-        { text: 'Avatar', value: 'fat', align: 'left' },
-        { text: 'Categories', value: 'calories', align: 'left' },
-        { text: 'Author', value: 'carbs', align: 'left' },
-        { text: 'Created Date', value: 'protein', align: 'left' },
-        { text: 'Status', value: 'iron', align: 'left' },
-        { text: 'Status', value: 'iron', align: 'left' },
-        { text: 'Status', value: 'iron', align: 'left' },
-        { text: 'Action', value: 'name', align: 'left', sortable: false }
-      ],
-      desserts: [
+  data: () => ({
+    breweries: [],
+    isLoading: false,
+    tree: [],
+    types: []
+  }),
+
+  computed: {
+    items() {
+      const children = this.types.map(type => ({
+        id: type,
+        name: this.getName(type),
+        children: this.getChildren(type)
+      }))
+
+      return [
         {
           id: 1,
-          name: 'Frozen Yogurt',
-          calories: 159,
-          fat: 6.0,
-          carbs: 24,
-          protein: 4.0,
-          iron: '1%',
-          iron: '1%',
-          iron: '1%'
-        },
-        {
-          id: 2,
-          name: 'Ice cream sandwich',
-          calories: 237,
-          fat: 9.0,
-          carbs: 37,
-          protein: 4.3,
-          iron: '1%',
-          iron: '1%',
-          iron: '1%'
-        },
-        {
-          id: 3,
-          name: 'Eclair',
-          calories: 262,
-          fat: 16.0,
-          carbs: 23,
-          protein: 6.0,
-          iron: '7%',
-          iron: '7%',
-          iron: '7%'
-        },
-        {
-          id: 4,
-          name: 'Cupcake',
-          calories: 305,
-          fat: 3.7,
-          carbs: 67,
-          protein: 4.3,
-          iron: '8%',
-          iron: '8%',
-          iron: '8%'
-        },
-        {
-          id: 5,
-          name: 'Gingerbread',
-          calories: 356,
-          fat: 16.0,
-          carbs: 49,
-          protein: 3.9,
-          iron: '16%',
-          iron: '16%',
-          iron: '16%'
-        },
-        {
-          id: 6,
-          name: 'Jelly bean',
-          calories: 375,
-          fat: 0.0,
-          carbs: 94,
-          protein: 0.0,
-          iron: '0%',
-          iron: '0%',
-          iron: '0%'
-        },
-        {
-          id: 7,
-          name: 'Lollipop',
-          calories: 392,
-          fat: 0.2,
-          carbs: 98,
-          protein: 0,
-          iron: '2%',
-          iron: '2%',
-          iron: '2%'
-        },
-        {
-          id: 8,
-          name: 'Honeycomb',
-          calories: 408,
-          fat: 3.2,
-          carbs: 87,
-          protein: 6.5,
-          iron: '45%',
-          iron: '45%',
-          iron: '45%'
-        },
-        {
-          id: 9,
-          name: 'Donut',
-          calories: 452,
-          fat: 25.0,
-          carbs: 51,
-          protein: 4.9,
-          iron: '22%',
-          iron: '22%',
-          iron: '22%'
-        },
-        {
-          id: 10,
-          name: 'KitKat',
-          calories: 518,
-          fat: 26.0,
-          carbs: 65,
-          protein: 7,
-          iron: '6%',
-          iron: '6%',
-          iron: '6%'
-        },
-        {
-          id: 11,
-          name: 'Buom dem',
-          calories: 111,
-          fat: 63.0,
-          carbs: 165,
-          protein: 74,
-          iron: '30%',
-          iron: '30%',
-          iron: '30%'
+          name: 'All Breweries',
+          children
         }
       ]
+    },
+    selections() {
+      const selections = []
+
+      for (const leaf of this.tree) {
+        const brewery = this.breweries.find(brewery => brewery.id === leaf)
+
+        if (!brewery) continue
+
+        selections.push(brewery)
+      }
+
+      return selections
+    },
+    shouldShowTree() {
+      return this.breweries.length > 0 && !this.isLoading
+    }
+  },
+
+  watch: {
+    breweries(val) {
+      this.types = val
+        .reduce((acc, cur) => {
+          const type = cur.brewery_type
+
+          if (!acc.includes(type)) acc.push(type)
+
+          return acc
+        }, [])
+        .sort()
+    }
+  },
+
+  methods: {
+    fetch() {
+      if (this.breweries.length) return
+
+      return fetch('https://api.openbrewerydb.org/breweries')
+        .then(res => res.json())
+        .then(data => (this.breweries = data))
+        .catch(err => console.log(err))
+    },
+    getChildren(type) {
+      const breweries = []
+
+      for (const brewery of this.breweries) {
+        if (brewery.brewery_type !== type) continue
+
+        breweries.push({
+          ...brewery,
+          name: this.getName(brewery.name)
+        })
+      }
+
+      return breweries.sort((a, b) => {
+        return a.name > b.name ? 1 : -1
+      })
+    },
+    getName(name) {
+      return `${name.charAt(0).toUpperCase()}${name.slice(1)}`
     }
   }
 }
