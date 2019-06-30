@@ -2,7 +2,7 @@
   <v-container fluid grid-list-md>
     <v-layout column wrap>
       <v-flex>
-        <v-btn color="primary">Add page</v-btn>
+        <TheBreadcrumbs />
       </v-flex>
       <v-flex>
         <TheForm />
@@ -12,11 +12,13 @@
 </template>
 
 <script>
+import TheBreadcrumbs from '~/components/Admin/Posts/TheBreadcrumbs'
 import TheForm from '~/components/Admin/Posts/TheForm'
 
 export default {
   layout: 'adminWithSidebar',
   components: {
+    TheBreadcrumbs,
     TheForm
   }
 }
