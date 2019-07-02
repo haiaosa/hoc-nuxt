@@ -1,5 +1,7 @@
 <template>
-  <v-breadcrumbs :items="items" divider=">"></v-breadcrumbs>
+  <v-card>
+    <v-breadcrumbs :items="items" divider=">"></v-breadcrumbs>
+  </v-card>
 </template>
 
 <script>
