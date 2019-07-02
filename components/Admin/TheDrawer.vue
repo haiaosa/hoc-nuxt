@@ -53,22 +53,22 @@ export default {
             {
               action: 'list',
               title: 'Lists',
-              link: 'admin-posts-list'
+              link: 'admin-users-list'
             },
             {
               action: 'note_add',
               title: 'Add',
-              link: 'admin-posts-add'
+              link: 'admin-users-add'
             },
             {
               action: 'lock_open',
               title: 'Edit',
-              link: 'admin-posts-edit'
+              link: 'admin-users-edit'
             },
             {
               action: 'priority_high',
               title: 'Delete',
-              link: 'admin-posts-delete'
+              link: 'admin-users-delete'
             }
           ]
         },
@@ -157,22 +157,22 @@ export default {
             {
               action: 'list',
               title: 'Lists',
-              link: 'admin-posts-list'
+              link: 'admin-roles-list'
             },
             {
               action: 'note_add',
               title: 'Add',
-              link: 'admin-posts-add'
+              link: 'admin-roles-add'
             },
             {
               action: 'lock_open',
               title: 'Edit',
-              link: 'admin-posts-edit'
+              link: 'admin-roles-edit'
             },
             {
               action: 'priority_high',
               title: 'Delete',
-              link: 'admin-posts-delete'
+              link: 'admin-roles-delete'
             }
           ]
         },
