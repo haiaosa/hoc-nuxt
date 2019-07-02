@@ -52,7 +52,6 @@
         <td class="text-xs-left">{{ props.item.carbs }}</td>
         <td class="text-xs-left">{{ props.item.calories }}</td>
         <td class="text-xs-left">{{ props.item.fat }}</td>
-        <td class="text-xs-left">{{ props.item.protein }}</td>
         <td class="text-xs-left">{{ props.item.iron }}</td>
         <td class="justify-left layout px-0">
           <v-icon small class="secondary--text mr-2" @click="">
@@ -90,12 +89,10 @@ export default {
       headers: [
         { text: 'ID', value: 'id', align: 'left' },
         { text: 'Title', value: 'name', align: 'left' },
-        { text: 'Avatar', value: 'fat', align: 'left' },
-        { text: 'Categories', value: 'calories', align: 'left' },
-        { text: 'Author', value: 'carbs', align: 'left', sortable: false },
-        { text: 'Created At', value: 'protein', align: 'left' },
+        { text: 'Created At', value: 'calories', align: 'left' },
+        { text: 'Updated At', value: 'fat', align: 'left' },
         { text: 'Status', value: 'iron', align: 'left' },
-        { text: 'Action', value: 'name', align: 'left', sortable: false }
+        { text: 'Action', value: 'fat', align: 'left', sortable: false }
       ],
       desserts: [
         {
@@ -104,7 +101,6 @@ export default {
           calories: 'Events',
           fat: 'haiaosa',
           carbs: 24,
-          protein: 4.0,
           iron: '1%'
         },
         {
@@ -113,7 +109,6 @@ export default {
           calories: 'Uncategorized',
           fat: 'haiaosa',
           carbs: 37,
-          protein: 4.3,
           iron: '1%'
         },
         {
@@ -122,7 +117,6 @@ export default {
           calories: 'Events',
           fat: 'haiaosa',
           carbs: 23,
-          protein: 6.0,
           iron: '7%'
         },
         {
@@ -131,7 +125,6 @@ export default {
           calories: 'Events',
           fat: 'haiaosa',
           carbs: 67,
-          protein: 4.3,
           iron: '8%'
         },
         {
@@ -140,7 +133,6 @@ export default {
           calories: 'Uncategorized',
           fat: 'haiaosa',
           carbs: 49,
-          protein: 3.9,
           iron: '16%'
         },
         {
@@ -149,7 +141,6 @@ export default {
           calories: 'Events',
           fat: 'haiaosa',
           carbs: 94,
-          protein: 0.0,
           iron: '0%'
         },
         {
@@ -158,7 +149,6 @@ export default {
           calories: 'Uncategorized',
           fat: 'haiaosa',
           carbs: 98,
-          protein: 0,
           iron: '2%'
         },
         {
@@ -176,7 +166,6 @@ export default {
           calories: 'Business',
           fat: 'haiaosa',
           carbs: 51,
-          protein: 4.9,
           iron: '22%'
         },
         {
@@ -185,7 +174,6 @@ export default {
           calories: 'Projects',
           fat: 'haiaosa',
           carbs: 65,
-          protein: 7,
           iron: '6%'
         },
         {
@@ -194,7 +182,6 @@ export default {
           calories: 'Portfolio',
           fat: 'haiaosa',
           carbs: 165,
-          protein: 74,
           iron: '30%'
         }
       ]

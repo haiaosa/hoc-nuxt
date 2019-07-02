@@ -13,8 +13,8 @@
 </template>
 
 <script>
-import TheFilters from '~/components/Admin/Posts/TheFilters'
-import TheDatas from '~/components/Admin/Posts/TheDatas'
+import TheFilters from '~/components/Admin/Categories/TheFilters'
+import TheDatas from '~/components/Admin/Categories/TheDatas'
 
 export default {
   layout: 'adminWithSidebar',

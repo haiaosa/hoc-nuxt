@@ -15,8 +15,8 @@
 </template>
 
 <script>
-import TheBreadcrumbs from '~/components/Admin/Posts/TheBreadcrumbs'
-import TheForm from '~/components/Admin/Posts/TheForm'
+import TheBreadcrumbs from '~/components/Admin/Tags/TheBreadcrumbs'
+import TheForm from '~/components/Admin/Tags/TheForm'
 
 export default {
   layout: 'adminWithSidebar',
