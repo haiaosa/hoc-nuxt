@@ -5,6 +5,7 @@
     <v-spacer></v-spacer>
     <v-toolbar-items>
       <v-btn flat nuxt :to="{ name: 'admin' }">Admin</v-btn>
+      <v-btn flat nuxt :to="{ name: 'learn' }">learn</v-btn>
     </v-toolbar-items>
   </v-toolbar>
 </template>

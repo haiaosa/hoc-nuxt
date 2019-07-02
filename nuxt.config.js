@@ -44,6 +44,7 @@ export default {
    */
   plugins: [
     '~/plugins/axios',
+    { src: '~/plugins/iconfont.js', ssr: false },
     // chi can khai bao vue-line-clamp cho nay thoi
     { src: '~/plugins/vue-line-clamp.js', ssr: false },
     { src: '~/plugins/vue-clampy.js', ssr: false }

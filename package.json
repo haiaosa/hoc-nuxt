@@ -21,6 +21,7 @@
     "webpack-bundle-analyzer": "^3.3.2"
   },
   "devDependencies": {
+    "@mdi/font": "^3.7.95",
     "nodemon": "^1.18.9"
   }
 }
