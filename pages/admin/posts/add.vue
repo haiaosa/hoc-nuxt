@@ -5,6 +5,9 @@
         <TheBreadcrumbs />
       </v-flex>
       <v-flex>
+        <v-btn color="primary">Add Posts page</v-btn>
+      </v-flex>
+      <v-flex>
         <TheForm />
       </v-flex>
     </v-layout>

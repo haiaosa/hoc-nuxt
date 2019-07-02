@@ -79,22 +79,22 @@ export default {
             {
               action: 'list',
               title: 'Lists',
-              link: 'admin-posts-list'
+              link: 'admin-categories-list'
             },
             {
               action: 'note_add',
               title: 'Add',
-              link: 'admin-posts-add'
+              link: 'admin-categories-add'
             },
             {
               action: 'lock_open',
               title: 'Edit',
-              link: 'admin-posts-edit'
+              link: 'admin-categories-edit'
             },
             {
               action: 'priority_high',
               title: 'Delete',
-              link: 'admin-posts-delete'
+              link: 'admin-categories-delete'
             }
           ]
         },

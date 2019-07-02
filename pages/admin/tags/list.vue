@@ -1,7 +1,7 @@
 <template>
   <v-layout class="ma-2" column wrap>
     <v-flex>
-      <v-btn color="primary">List Posts page</v-btn>
+      <v-btn color="primary">List Tags page</v-btn>
     </v-flex>
     <v-flex>
       <TheFilters />

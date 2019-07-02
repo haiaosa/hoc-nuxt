@@ -2,7 +2,7 @@
   <v-container fluid grid-list-md>
     <v-layout column wrap>
       <v-flex>
-        <v-btn color="primary">Delete Posts page</v-btn>
+        <v-btn color="primary">Delete Tags page</v-btn>
       </v-flex>
       <v-flex>
         <v-card>
