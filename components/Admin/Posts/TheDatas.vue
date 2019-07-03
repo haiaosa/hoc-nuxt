@@ -58,9 +58,10 @@
           <v-icon small class="secondary--text mr-2" @click="">
             edit
           </v-icon>
-          <v-icon small class="secondary--text " @click="">
+          <v-icon small class="secondary--text " @click.stop="dialog = true">
             delete
           </v-icon>
+          <TheDelete dialog="dialog" />
         </td>
       </template>
       <template v-slot:no-data>
@@ -81,7 +82,12 @@
   </v-card>
 </template>
 <script>
+import TheDelete from '~/components/Admin/Posts/TheDelete.vue'
+
 export default {
+  components: {
+    TheDelete
+  },
   data() {
     return {
       search: '',
@@ -197,7 +203,9 @@ export default {
           protein: 74,
           iron: '30%'
         }
-      ]
+      ],
+      // dialog
+      dialog: false
     }
   }
 }
