@@ -1,25 +1,29 @@
 <template>
-  <v-card>
-    <v-layout row wrap>
-      <v-flex xs3 v-for="(item, index) in items" :key="index">
-        <v-card>
-          <v-layout>
-            <v-flex xs5>
-              <v-icon>{{ item.icon }}</v-icon>
-            </v-flex>
-            <v-flex xs7>
-              <v-card-text>
-                <div>
-                  <div class="headline">{{ item.name }}</div>
-                  <div>{{ item.value }}</div>
-                </div>
-              </v-card-text>
-            </v-flex>
-          </v-layout>
-        </v-card>
-      </v-flex>
-    </v-layout>
-  </v-card>
+  <v-layout row wrap>
+    <v-flex xs3 v-for="(item, index) in items" :key="index">
+      <v-layout row wrap>
+        <v-flex xs4>
+          <v-avatar size="75" color="primary">
+            <img
+              src="https://vuetifyjs.com/apple-touch-icon-180x180.png"
+              alt="alt"
+            />
+          </v-avatar>
+        </v-flex>
+        <v-flex xs8>
+          <p class="body-1 font-italic">
+            {{ item.name }}
+          </p>
+          <p class="title secondary--text">
+            {{ item.value }}
+          </p>
+        </v-flex>
+        <v-flex xs12>
+          <v-divider class="primary"></v-divider>
+        </v-flex>
+      </v-layout>
+    </v-flex>
+  </v-layout>
 </template>
 
 <script>

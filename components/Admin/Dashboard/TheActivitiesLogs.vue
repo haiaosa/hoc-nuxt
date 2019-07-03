@@ -1,8 +1,13 @@
 <template>
   <v-card>
-    <v-card-title primary-title>
-      Activities Logs
-    </v-card-title>
+    <v-card-actions>
+      <v-btn icon class="mt-1">
+        <v-icon small>sync</v-icon>
+      </v-btn>
+      <v-card-title primary-title>
+        Activities Logs
+      </v-card-title>
+    </v-card-actions>
     <v-container fluid grid-list-md>
       <v-data-iterator
         :items="items"

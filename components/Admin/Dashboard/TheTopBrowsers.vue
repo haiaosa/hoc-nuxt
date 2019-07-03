@@ -1,8 +1,13 @@
 <template>
   <v-card>
-    <v-card-title primary-title>
-      Top Browsers
-    </v-card-title>
+    <v-card-actions>
+      <v-btn icon class="mt-1">
+        <v-icon small>laptop</v-icon>
+      </v-btn>
+      <v-card-title primary-title>
+        Top Browsers
+      </v-card-title>
+    </v-card-actions>
     <v-data-table :headers="headers" :items="desserts" class="elevation-1">
       <template v-slot:items="props">
         <td>{{ props.item.order }}</td>

@@ -1,46 +1,30 @@
 <template>
   <v-app dark>
     <v-content>
-      <v-container fluid grid-list-md>
-        <v-layout align-center column wrap fill-height>
-          <v-flex>
-            <v-toolbar class="secondary">
-              <v-toolbar-title>Login System</v-toolbar-title>
-            </v-toolbar>
-          </v-flex>
-          <v-flex>
-            <v-form>
-              <v-layout row wrap>
-                <v-flex xs12>
-                  <v-text-field name="Username" label="Username"></v-text-field>
-                </v-flex>
-                <v-flex xs12>
-                  <v-text-field name="Password" label="Password"></v-text-field>
-                </v-flex>
-                <v-flex xs4>
-                  <v-checkbox
-                    v-model="checkbox"
-                    label="Remember me?"
-                  ></v-checkbox>
-                </v-flex>
-                <v-flex xs8>
-                  <v-layout row wrap align-content-end>
-                    <v-flex xs5 offset-xs7>
-                      <v-card class="grey darken-3" nuxt :to="{ name: 'note' }">
-                        <v-card-text>
-                          Quên mật khẩu?
-                        </v-card-text>
-                      </v-card>
-                    </v-flex>
-                  </v-layout>
-                </v-flex>
-                <v-flex xs12>
-                  <v-btn color="secondary" large block>
-                    <v-icon left>swap_horiz</v-icon>Login</v-btn
-                  >
-                </v-flex>
-              </v-layout>
-            </v-form>
+      <v-container fluid grid-list-md fill-height>
+        <v-layout row wrap align-center justify-center>
+          <v-flex xs3 v-for="n in 8" :key="n">
+            <v-layout row wrap>
+              <v-flex xs4>
+                <v-avatar size="75" color="primary">
+                  <img
+                    src="https://vuetifyjs.com/apple-touch-icon-180x180.png"
+                    alt="alt"
+                  />
+                </v-avatar>
+              </v-flex>
+              <v-flex xs8>
+                <p class="body-1 font-italic">
+                  Percent new session
+                </p>
+                <p class="title secondary--text">
+                  40.74%
+                </p>
+              </v-flex>
+              <v-flex xs12>
+                <v-divider class="primary"></v-divider>
+              </v-flex>
+            </v-layout>
           </v-flex>
         </v-layout>
       </v-container>
