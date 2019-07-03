@@ -58,10 +58,10 @@
           <v-icon small class="secondary--text mr-2" @click="">
             edit
           </v-icon>
-          <v-icon small class="secondary--text " @click.stop="dialog = true">
+          <v-icon small class="secondary--text " @click="">
             delete
           </v-icon>
-          <TheDelete dialog="dialog" />
+          <!-- <TheDelete dialog="dialog" /> -->
         </td>
       </template>
       <template v-slot:no-data>
