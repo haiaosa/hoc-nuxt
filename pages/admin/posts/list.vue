@@ -9,6 +9,13 @@
     <v-flex>
       <TheDatas />
     </v-flex>
+    <v-flex>
+      <v-card class="yellow">
+        <v-card-title primary-title>
+          testing
+        </v-card-title>
+      </v-card>
+    </v-flex>
   </v-layout>
 </template>
 
